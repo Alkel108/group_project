@@ -4,23 +4,41 @@ nav{
 
 
 body{
-    font-family: "poppins";
+    font-family: "poppins"; /*Be sure to add back-up font*/
     margin: 0;
     padding: 0;
     line-height: 1.5;
-    background-color: #b2babb;
+    background-color: #eaf4fb;
 }
 
 header{
-    background-color: rgb(188, 229, 254); /*Colour not set in stone, (trying to get styled html to display in live server*/
-
-
+    background-color: #bce5fe; /*Colour not set in stone*/
+    text-align: center;
+    padding: 1rem
 }
 
-.jobs_page_sections {
+footer{ /*Add hover to text, color, again, is open to change as with other elements*/
+    background-color: #bce5fe; /*Footer should be universal accross all pages*/
+    text-align: center;
+    padding: 10px;
+}
+
+.jobs_page_sections{
     background-color: #f9feff;
     margin: 25px auto;
     padding: 25px;
     border-radius: 8px;
     width: 85%;
 }
+
+.jobs_page_aside{
+    background-color:#f9feff;
+    padding: 10px;
+    margin: 30px auto; 
+    border-bottom: 4px;
+    width: 75%;
+    border-top: 4px solid #1cb3ff;
+    transition: border-color 0.2s ease;
+}
+/*Add hover propery to headings on this page later?*/
+.jobs_page_aside:hover{border-top-color:#fff94f;} /*Just experimenting with hover here, MAYBE add more such hover borders*/
