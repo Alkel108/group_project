@@ -1,3 +1,15 @@
 nav{
     justify-content: center;
 }
+
+header{
+    background-color: rgb(188, 229, 254);
+}
+
+.jobs_page_sections {
+    background-color: #f3f5f4;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 8px;
+    width: 80%;
+}
