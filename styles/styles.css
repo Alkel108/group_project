@@ -2,14 +2,25 @@ nav{
     justify-content: center;
 }
 
+
+body{
+    font-family: "poppins";
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    background-color: #b2babb;
+}
+
 header{
-    background-color: rgb(188, 229, 254);
+    background-color: rgb(188, 229, 254); /*Colour not set in stone, (trying to get styled html to display in live server*/
+
+
 }
 
 .jobs_page_sections {
-    background-color: #f3f5f4;
-    margin: 30px auto;
+    background-color: #f9feff;
+    margin: 25px auto;
     padding: 25px;
     border-radius: 8px;
-    width: 80%;
+    width: 85%;
 }
