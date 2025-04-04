@@ -11,24 +11,73 @@ body{
     background-color: #eaf4fb;
 }
 
-header{
-    background-color: #bce5fe; /*Colour not set in stone*/
+.header_jobs_page{ /*Should we make this universal could be different on other pages I guess?*/
+    background-color: #a8dbfb; /*Colour not set in stone, BUT I think its pretty good ngl, should consider same themeing website wide (open to differing ideas)*/
     text-align: center;
-    padding: 1rem
+    padding: 1rem;
+    border-bottom: 7px solid #1cb3ff;
+    transition: border-color 0.2s ease;
 }
 
+.header_jobs_page:hover{border-bottom-color:#4df77d;}
+
 footer{ /*Add hover to text, color, again, is open to change as with other elements*/
-    background-color: #bce5fe; /*Footer should be universal accross all pages*/
+    background-color: #a8dbfb; /*Footer should be universal accross all pages*/
     text-align: center;
     padding: 10px;
 }
 
-.jobs_page_sections{
+
+.jobs_sections_grouped{
+    display: flex;
+    gap: 20px;
+    justify-content:center ;
+}
+
+.jobs_page_section_1, .jobs_page_section_2{
     background-color: #f9feff;
-    margin: 25px auto;
-    padding: 25px;
-    border-radius: 8px;
-    width: 85%;
+    padding: 25px; /*should I do rem*/
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 2px;
+    width: 48%;
+    margin-top: 25px;
+    box-sizing: border-box;
+    border-color: #1cb3ff;
+    transition: border-color 0.2s ease;
+}
+
+.jobs_page_section_1:hover{border-color: #4df77d;}
+.jobs_page_section_2:hover{border-color: #4df77d;}
+
+.jobs_page_list li{ /*Adding the Li means that only the INDIVIDUAL LISTS go bold one at a time!*/
+    font-weight: normal;
+    transition: font-size 0.2s ease, font-weight 0.2s ease;
+}
+
+.jobs_page_list li:hover{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.jobs_page_text p{ /*Adding the p means that only the INDIVIDUAL paragraph elements go bold one at a time!*/
+    font-weight: normal;
+    transition: font-size 0.2s ease, font-weight 0.2s ease;
+}
+
+.jobs_page_text p:hover{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.jobs_page_text_will_do{ /*Adding the p means that only the INDIVIDUAL paragraph elements go bold one at a time!*/
+    font-weight: normal;
+    transition: font-size 0.2s ease, font-weight 0.2s ease;
+}
+
+.jobs_page_text_will_do:hover{ /*Created separate class from text as it amkes stuff go funky*/
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .jobs_page_aside{
@@ -41,4 +90,4 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     transition: border-color 0.2s ease;
 }
 /*Add hover propery to headings on this page later?*/
-.jobs_page_aside:hover{border-top-color:#fff94f;} /*Just experimenting with hover here, MAYBE add more such hover borders*/
+.jobs_page_aside:hover{border-top-color:#4df77d;} /*Just experimenting with hover here, MAYBE add more such hover borders*/

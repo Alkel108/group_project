@@ -7,96 +7,114 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
-<body> <!--Make the page fuller, lots of white space to the right OR place both job postings next to eachother to solve this???-->
-    <header>
+<body> <!-- place both job postings next to eachother to solve this???-->
+    <header class="header_jobs_page"> 
         <h1>Position Descriptions</h1>
     </header>
 <!--KEEP IN MIND: For now what is written IN SECTION 1 is just filler text. Much work needs done, DON'T FORGT THE FOOTER-->
-    <section class="jobs_page_sections"> <!---DON'T FORGET TO STYLE THE SECTION TAGS IN CSS TO AMKE LOOK NICE-->
-        <h2>Given Job</h2> <!--I don't think we were assigned an actual description just yet, or maybe I just can't find it? It should be on Canvas idk-->
-
-        <p>Reference Number: SL56</p>
-        <P>Salary Range: $120,000-140,0000</P>
-        <p>Reports to: Project Manager</p>
-        <p>Location: Remote</p>
-
-        <h3>What you will do</h3>
-        <p>This job requires you to be an expirenced programmer and have a deep understanding of full stack web development</p>
-
-        <h3>Key responsibilities</h3>
-        <ul> <!--The below job descriptions are AI generated-->
-            <li>Develop and maintain scalable web applications across the front-end and back-end.</li> 
-            <li>Optimize performance and ensure security best practices in web applications.</li>
-            <li>Lead code reviews and mentor junior developers to uphold coding standards.</li>
-            <li>Manage CI/CD pipelines and automate deployments for efficient development workflows.</li>
-            <li>Troubleshoot and debug complex issues to ensure system reliability.</li>
-        </ul>
-
-        <h3>Job requirements</h3>
-
-        <p>Essential to have:</p>
-
-        <ul>
-            <li>Have a Bachelor's degree in Computer Science</li>
-            <li>Have five+ years expirence working as a python developer.</li>
-            <li>Have at least three years expirence in fron end web-development.</li>
-            <li>Be proficent in PHP</li>
-        </ul>
-
-        <p>Preferable to have:</p>
-
-        <ul>
-            <li>C progarmming skills</li>
-            <li>Know the Django framework.</li>
-            <li>Know the flask framework.</li>
-            <li>Worked at a fortune 500 company.</li>
-        </ul>
-    </section> 
-
-    <section class="jobs_page_sections">
-        <h2>Senior Full Stack Web-Developer</h2> <!--Section does not conatin filler content at all-->
-
-        <p>Reference Number: SR71</p>
-        <P>Salary Range: $120,000-140,0000</P>
-        <p>Reports to: Project Manager</p>
-        <p>Location: Remote</p>
-
-        <h3>What you will do</h3>
-        <p>This job requires you to be an expirenced programmer and have a deep understanding of full stack web development</p>
-
-        <h3>Key responsibilities</h3>
-        <ul> <!--Change this description-->
-            <li>Develop and maintain scalable web applications across the front-end and back-end.</li> 
-            <li>Optimize performance and ensure security best practices in web applications.</li>
-            <li>Lead code reviews and mentor junior developers to uphold coding standards.</li>
-            <li>Manage CI/CD pipelines and automate deployments for efficient development workflows.</li>
-            <li>Troubleshoot and debug complex issues to ensure system reliability.</li>
-        </ul>
-
-        <h3>Job requirements</h3>
-
-        <p>Essential to have:</p>
-
-        <ul>
-            <li>Have a Bachelor's degree in Computer Science</li> <!--Change this to the actual position requirements-->
-            <li>Have five+ years expirence working as a python developer.</li>
-            <li>Have at least three years expirence in fron end web-development.</li>
-            <li>Be proficent in PHP</li>
-        </ul>
-
-        <p>Preferable to have:</p>
-
-        <ul>
-            <li>C progarmming skills</li> <!--Change this to the actual position requirements-->
-            <li>Know the Django framework.</li>
-            <li>Know the flask framework.</li>
-            <li>Worked at a fortune 500 company.</li>
-        </ul>
-    </section>
+    <div class="jobs_sections_grouped">
+        <section class="jobs_page_section_1"> <!--Make content what we will actually have on the this webpage next, ELIMINATE FILLER text for "Given Job"-->
+            <h2>Given Job</h2> <!--I don't think we were assigned an actual description just yet, or maybe I just can't find it? It should be on Canvas idk-->
+    
+            <div class="jobs_page_text">
+            <p>Reference Number: SL56</p>
+            <P>Salary Range: $120,000-140,0000</P>
+            <p>Reports to: Project Manager</p>
+            <p>Location: Remote</p>
+            </div>
+    
+            <hr> <!--Style hr in CSS-->
+    
+            <h3>What you will do</h3>
+            <p class="jobs_page_text_will_do">This job requires you to be an expirenced programmer and have a deep understanding of full stack web development.</p>
+    
+            <hr>
+    
+            <h3>Key responsibilities</h3> <!--Make all list items become bigger abd bold when you hover over them-->
+            <ul class="jobs_page_list"> <!--The below job descriptions are AI generated-->
+                <li>Develop and maintain scalable web applications across the front-end and back-end.</li> 
+                <li>Optimize performance and ensure security best practices in web applications.</li>
+                <li>Lead code reviews and mentor junior developers to uphold coding standards.</li>
+                <li>Manage CI/CD pipelines and automate deployments for efficient development workflows.</li>
+                <li>Troubleshoot and debug complex issues to ensure system reliability.</li>
+            </ul>
+    
+            <hr>
+    
+            <h3>Job requirements</h3>
+    
+            <p>Essential to have:</p>
+    
+            <ul class="jobs_page_list">
+                <li>Have a Bachelor's degree in Computer Science</li>
+                <li>Have five+ years expirence working as a python developer.</li>
+                <li>Have at least three years expirence in fron end web-development.</li>
+                <li>Be proficent in PHP</li>
+            </ul>
+    
+            <p>Preferable to have:</p>
+    
+            <ul class="jobs_page_list">
+                <li>C progarmming skills</li>
+                <li>Know the Django framework.</li>
+                <li>Know the flask framework.</li>
+                <li>Worked at a fortune 500 company.</li>
+            </ul>
+        </section> 
+    
+        <section class="jobs_page_section_2">
+            <h2>Senior Full Stack Web-Developer</h2> <!--Section does not conatin filler content at all-->
+    
+            <div class="jobs_page_text">
+            <p>Reference Number: SR71</p>
+            <P>Salary Range: $120,000-140,0000</P>
+            <p>Reports to: Project Manager</p>
+            <p>Location: Remote</p>
+            </div>
+    
+            <hr>
+    
+            <h3>What you will do</h3>
+            <p class="jobs_page_text_will_do">This job requires you to be an expirenced programmer and have a deep understanding of full stack web development.</p>
+    
+            <hr>
+    
+            <h3>Key responsibilities</h3>
+            <ul class="jobs_page_list"> <!--Change this description-->
+                <li>Develop and maintain scalable web applications across the front-end and back-end.</li> 
+                <li>Optimize performance and ensure security best practices in web applications.</li>
+                <li>Lead code reviews and mentor junior developers to uphold coding standards.</li>
+                <li>Manage CI/CD pipelines and automate deployments for efficient development workflows.</li>
+                <li>Troubleshoot and debug complex issues to ensure system reliability.</li>
+            </ul>
+    
+            <hr>
+    
+            <h3>Job requirements</h3>
+    
+            <p>Essential to have:</p>
+    
+            <ul class="jobs_page_list">
+                <li>Have a Bachelor's degree in Computer Science</li> <!--Change this to the actual position requirements-->
+                <li>Have five+ years expirence working as a python developer.</li>
+                <li>Have at least three years expirence in fron end web-development.</li>
+                <li>Be proficent in PHP</li>
+            </ul>
+    
+            <p>Preferable to have:</p>
+    
+            <ul class="jobs_page_list">
+                <li>C progarmming skills</li> <!--Change this to the actual position requirements-->
+                <li>Know the Django framework.</li>
+                <li>Know the flask framework.</li>
+                <li>Worked at a fortune 500 company.</li>
+            </ul>
+        </section>    
+    </div>
 
     <aside class="jobs_page_aside">
         <h3>Why else should you join our company?</h3>
-        <ol>
+        <ol class="jobs_page_list">
             <li>98 % Of our Employees are satisfied with their positions.</li>
             <li>We provide 4 weeks of paid annual leave.</li>
             <li>We provide 3 additional weeks of unpaid annual leave.</li>
