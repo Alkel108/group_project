@@ -36,10 +36,14 @@ body{
 
 
 
-/*Below code Jacob responsible for*/
+/*Below code Jacob responsible for*/   /*COMMENT WHAT CSS DOES MORE MOVE CODE IN LINE WITH MINE DO THIS FOR 15 MIN*/
+/*Do mobile optimisation*/
+/*Style the header better in next visit*/
+/*Put something to the left of the aside, look at examples for inspiration*/
+/*Think about how to style sticky element if I choose to do so*/
 .header_jobs_page{ /*Should we make this universal could be different on other pages I guess?*/
     background-color: #a8dbfb; /*Colour not set in stone, BUT I think its pretty good ngl, should consider same themeing website wide (open to differing ideas)*/
-    text-align: center; /*COMMENT WHAT CSS DOES MORE MOVE CODE IN LINE WITH MINE*/
+    text-align: center; 
     padding: 1rem; /*Padding is the space between the text and element borders, used rem, is uniform and better for sacaling, think about changing everything to rem*/
     border-bottom: 7px solid #1cb3ff;
     transition: border-color 0.2s ease;
@@ -51,26 +55,27 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     background-color: #a8dbfb; /*Footer should be universal accross all pages?*/
     text-align: center;
     padding: 10px;
+    clear: both; /*Ensures that floated elements sit below the footer (aside caused trouble when I floated it right, which was a requirement*/
 }
 
 
 .jobs_sections_grouped{
-    display: flex;
+    display: flex; /*Enables flexbox*/
     gap: 20px;
-    justify-content:center ;
+    justify-content:center; /*Horizontally aligns items*/
 }
 
 .jobs_page_section_1, .jobs_page_section_2{
     background-color: #f9feff;
     padding: 25px; /*should I do rem*/
-    border-radius: 12px;
+    border-radius: 12px; /*Creates rounded edges*/
     border-style: solid;
     border-width: 2px;
-    width: 48%;
+    width: 48%; 
     margin-top: 25px;
     box-sizing: border-box;
     border-color: #1cb3ff;
-    transition: border-color 0.2s ease;
+    transition: border-color 0.2s ease; /*The length of the transition between colours*/
 }
 
 .jobs_page_section_1:hover{border-color: #4df77d;}
@@ -82,36 +87,18 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
 }
 
 .jobs_page_list li:hover{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.jobs_page_text p{ /*Adding the p means that only the INDIVIDUAL paragraph elements go bold one at a time!*/
-    font-weight: normal;
-    transition: font-size 0.2s ease, font-weight 0.2s ease;
-}
-
-.jobs_page_text p:hover{
-    font-size: 20px;
-    font-weight: bold;
-}
-
-.jobs_page_text_will_do{ /*Adding the p means that only the INDIVIDUAL paragraph elements go bold one at a time!*/
-    font-weight: normal;
-    transition: font-size 0.2s ease, font-weight 0.2s ease;
-}
-
-.jobs_page_text_will_do:hover{ /*Created separate class from text as it amkes stuff go funky*/
-    font-size: 20px;
-    font-weight: bold;
-}
+    font-size: 16.5px; /*Think about using em instead*/
+    color: #306683;
+    font-weight: 500;
+} /*Removed the bolded hover feature for non-lists*/
 
 .jobs_page_aside{ /*Styles the aside*/
     background-color:#f9feff;
     padding: 10px;
     margin: 30px auto; 
     border-bottom: 4px;
-    width: 75%;
+    width: 25%;
+    float: right;
     border-top: 4px solid #1cb3ff;
     transition: border-color 0.2s ease;
 }
