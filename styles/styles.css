@@ -32,10 +32,15 @@ body{
     background-color: #eaf4fb;
 }
 
+
+
+
+
+/*Below code Jacob responsible for*/
 .header_jobs_page{ /*Should we make this universal could be different on other pages I guess?*/
     background-color: #a8dbfb; /*Colour not set in stone, BUT I think its pretty good ngl, should consider same themeing website wide (open to differing ideas)*/
     text-align: center; /*COMMENT WHAT CSS DOES MORE MOVE CODE IN LINE WITH MINE*/
-    padding: 1rem;
+    padding: 1rem; /*Padding is the space between the text and element borders, used rem, is uniform and better for sacaling, think about changing everything to rem*/
     border-bottom: 7px solid #1cb3ff;
     transition: border-color 0.2s ease;
 }
@@ -43,7 +48,7 @@ body{
 .header_jobs_page:hover{border-bottom-color:#4df77d;}
 
 footer{ /*Add hover to text, color, again, is open to change as with other elements*/
-    background-color: #a8dbfb; /*Footer should be universal accross all pages*/
+    background-color: #a8dbfb; /*Footer should be universal accross all pages?*/
     text-align: center;
     padding: 10px;
 }
@@ -101,7 +106,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     font-weight: bold;
 }
 
-.jobs_page_aside{
+.jobs_page_aside{ /*Styles the aside*/
     background-color:#f9feff;
     padding: 10px;
     margin: 30px auto; 
