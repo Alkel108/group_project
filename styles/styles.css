@@ -13,7 +13,7 @@ body{
 
 .header_jobs_page{ /*Should we make this universal could be different on other pages I guess?*/
     background-color: #a8dbfb; /*Colour not set in stone, BUT I think its pretty good ngl, should consider same themeing website wide (open to differing ideas)*/
-    text-align: center;
+    text-align: center; /*COMMENT WHAT CSS DOES MORE MOVE CODE IN LINE WITH MINE*/
     padding: 1rem;
     border-bottom: 7px solid #1cb3ff;
     transition: border-color 0.2s ease;
