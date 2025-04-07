@@ -1,7 +1,28 @@
-nav{
-    justify-content: center;
-}
 
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+
+    
+
+}
+nav{border-bottom: 7px solid #1cb3ff;}
+nav ul li{    
+    border:2px solid #1cb3ff;
+    border-radius: 12px;
+    
+    list-style-type: none;
+    
+}
+nav ul li a{color: #1cb3ff;}
+nav ul li:hover{ font-style: italic;
+    border:2px solid #4df77d;}
+
+a:link { text-decoration: none; }
+
+nav ul li a{display: flex; margin: 10px 20px 10px 20px;}
 
 body{
     font-family: "poppins"; /*Be sure to add back-up font*/
