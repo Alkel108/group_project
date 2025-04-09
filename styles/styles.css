@@ -51,10 +51,7 @@ body{
 /*Below code Jacob responsible for!!!*/  
 /*Do mobile optimisation*/
 /*Style the header better in next visit*/
-/*Put something to the left of the aside, look at examples for inspiration*/
-/*Think about how to style sticky element if I choose to do so*/
 /*Use different font for H1 element???? Check requirments again*/
-/**/
 
 .header_jobs_page{ /*Should we make this universal could be different on other pages I guess?*/
     background-color: #1f1f1f; /* Dark header background */
@@ -67,6 +64,7 @@ body{
 
 .header_jobs_page:hover{
     border-bottom-color:#4df77d;
+    /*<h1> elements should have their font variant, size and family etc. set using the short-hand font property. Ask tutor, seems unnecessary*/
 }
 
 footer{ /*Add hover to text, color, again, is open to change as with other elements*/
@@ -113,7 +111,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
 } /*Removed the bolded hover feature for non-lists*/
 
 
-/*Comment the hell out of the below code!*/
+/*Comment the hell out of the below code on next visit!*/
 
 .jobs_container {
     width: 100%;
@@ -132,7 +130,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     animation-duration: 3s;
     animation-fill-mode: forwards; /*Keeps animation in place after execution*/
 }   
-/*Find a way to make the animation start when I reach the image IF POSSIBLE WITHOUT JS that is*/
+/*Impossible to make the animation start when I reach the image without JS*/
 @keyframes mySlide {
     from {
       transform: translateX(0); /* Start at original position */
@@ -148,7 +146,6 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     height: auto;
     display: block; /*Makes the image behave like a block?*/
     border-radius: 17px; /*Rounds the edges*/
-    /*ADD A HOVER FEATURE WHERE THE IMAGE INCREASES IN SIZE*/
 }
 
 .jobs_page_aside {
@@ -171,8 +168,13 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     color: #1cb3ff;
 }
 
-.jobs_page_list {
-    list-style: decimal inside;
-    padding: 0;
-    margin: 0;
+#jobs_page_list_ol {
+    font-weight: normal;
+    transition: font-size 0.2s ease, font-weight 0.2s ease;
+}
+
+#jobs_page_list_ol li:hover {
+    font-size: 16.5px; /*Think about using em instead*/
+    color: #4df77d; /*The colour the text changes to*/
+    font-weight: 500; 
 }
