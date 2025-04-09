@@ -36,12 +36,13 @@ body{
 
 
 
-/*Below code Jacob responsible for*/   /*COMMENT WHAT CSS DOES MORE MOVE CODE IN LINE WITH MINE DO THIS FOR 15 MIN*/
+/*Below code Jacob responsible for!!!*/  
 /*Do mobile optimisation*/
 /*Style the header better in next visit*/
 /*Put something to the left of the aside, look at examples for inspiration*/
 /*Think about how to style sticky element if I choose to do so*/
 /*Use different font for H1 element???? Check requirments again*/
+/**/
 .header_jobs_page{ /*Should we make this universal could be different on other pages I guess?*/
     background-color: #a8dbfb; /*Colour not set in stone, BUT I think its pretty good ngl, should consider same themeing website wide (open to differing ideas)*/
     text-align: center; /*Aligns test in the center*/
@@ -93,24 +94,41 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     font-weight: 500; /*The thikness of the font*/
 } /*Removed the bolded hover feature for non-lists*/
 
+
+/*Comment the hell out of the below code!*/
+
 .jobs_container {
     width: 100%;
     overflow: hidden; /* Clears the floats inside */
     padding: 50px;/*The distance from the left to the image*/
-    box-sizing: border-box;
+    box-sizing: border-box; /*makes the height/width of an element include padding, boder, and content(makes sections fit side by side better)*/
 }
 
-.jobs_image-box {
-    float: left;
+.jobs_image-box { /*This relates to the div encasing the image itself*/
+    float: left; 
     width: 55%;
     padding: 10px;
-    box-sizing: border-box;
+    box-sizing: border-box; 
+    animation: mySlide; /*CALL this in @keyframes*/
+    animation-duration: 4s; /*Anniamtion duration*/
+    animation-timing-function: ease-out;
 }
+
+/*For this code here, the prompt I used was: */
+@keyframes mySlide {
+    from {
+      transform: translateX(0); /* Start at original position */
+    }
+    to {
+      transform: translateX(20px); /* Move 20px to the right */
+    }
+  }
+  
 
 .jobs_image-box img {
     width: 100%;
     height: auto;
-    display: block;
+    display: block; /*Makes the image behave like a block?*/
     border-radius: 17px; /*Rounds the edges*/
 }
 
