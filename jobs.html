@@ -1,42 +1,47 @@
-<!DOCTYPE html> <!--COMMENT ALL HTML TAKE 15 MINUTES TO DO THIS NEXT VISIT, AND ALL OTHER COMMENTED TASKS!!!-->
-<html lang="en"> <!--THINK ABOUT ADDING STICKY ELEMENT MAYBE IDK-->
-<head>
+<!--Make content what we will actually have on the this webpage next, ELIMINATE FILLER text for "Given Job"-->
+<!--THINK ABOUT ADDING STICKY ELEMENT MAYBE IDK--> <!--ADD AN APPLY BUTTON (LINKS TO JOB APPLICATION PAGE)!-->
+<!--COMMENT ALL HTML TAKE 15 MINUTES TO DO THIS NEXT VISIT, AND ALL OTHER COMMENTED TASKS!!! DO BEFORE ADDING IMG/BUTTONS-->
+<!--KEEP IN MIND: For now what is written IN SECTION 1 is just filler text. Much work needs done, DON'T FORGT THE FOOTER-->
+<!--ADD SOMETHING TO THE LEFT OF THE ASIDE, like an image or infographic-->
+<!--Add a button that links to or just a link to the job applications page-->
+
+<!DOCTYPE html> <!--Tells the browser that this is HTML5, important for interpretation-->
+<html lang="en"> 
+<head> <!--Contains meta tags, links to external content and to other files-->
     <meta charset="UTF-8">                  <!--ADD SOMETHING TO THE LEFT OF THE ASIDE-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Position Descriptions</title>
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles.css"> <!--Links HTML to CSS file-->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body> <!-- place both job postings next to eachother to solve this???-->
     <header class="header_jobs_page"> 
-        <h1>Position Descriptions</h1> <!--Add more semantic tags that may be missing on this webpage-->
+        <h1>Position Descriptions</h1> <!--Style h1, give it its own font using shorthand font property--> 
     </header>
-<!--KEEP IN MIND: For now what is written IN SECTION 1 is just filler text. Much work needs done, DON'T FORGT THE FOOTER-->
-    <div class="jobs_sections_grouped">
-        <section class="jobs_page_section_1"> <!--Make content what we will actually have on the this webpage next, ELIMINATE FILLER text for "Given Job"-->
-            <h2>Given Job</h2> <!--I don't think we were assigned an actual description just yet, or maybe I just can't find it? It should be on Canvas idk-->
+          
+    <div class="jobs_sections_grouped"> <!--Sections are in a div because its easier to have them at the same position when they are grouped, when no div is used everything is jumbled(Can I put this in a div?)-->
+        <section class="jobs_page_section_1"> <!--A section contains the main content related to a web page--> <!--Used to style hover/border/visuals--> 
+            <h2>Given Job</h2> <!--I don't think we were assigned an actual description just yet, ASK RAHUL-->
                                                 <!--In next visit ensure content for Senior Fullstack Web develper are correct-->
-            <div class="jobs_page_text">
             <p>Reference Number: SL56</p>          <!--ENSURE I ADJUST FOR MOBILE SO THAT TWO SECTIONS ARE VERTICALLY BELOW AND ABOVE-->
-            <P>Salary Range: $120,000-140,0000</P>
+            <P>Salary Range: $120,000-140,0000</P> <!--Regular paragraph text, vertically stacked-->
             <p>Reports to: Project Manager</p>
             <p>Location: Remote</p>
-            </div>
     
-            <hr> <!--Style hr in CSS-->
+            <hr> <!--This tag simply adds a line break-->
     
-            <h3>What you will do</h3>
-            <p class="jobs_page_text_will_do">This job requires you to be an expirenced programmer and have a deep understanding of full stack web development.</p>
+            <h3>What you will do</h3> <!--h3 tags used for subhaedings-->
+            <p>This job requires you to be an expirenced programmer and have a deep understanding of full stack web development.</p> <!--Class to style (May be defunct)-->
     
             <hr>
     
             <h3>Key responsibilities</h3> <!--Make all list items become bigger abd bold when you hover over them-->
-            <ul class="jobs_page_list"> <!--The below job descriptions are AI generated-->
-                <li>Develop and maintain scalable web applications across the front-end and back-end.</li> 
+            <ul class="jobs_page_list"> <!--This same class name is used for all lists since they will be styled the same, makes CSS simpler-->
+                <li>Develop and maintain scalable web applications across the front-end and back-end.</li> <!--Job descriptions are AI generated-->
                 <li>Optimize performance and ensure security best practices in web applications.</li>
                 <li>Lead code reviews and mentor junior developers to uphold coding standards.</li>
                 <li>Manage CI/CD pipelines and automate deployments for efficient development workflows.</li>
-                <li>Troubleshoot and debug complex issues to ensure system reliability.</li>
+                <li>Troubleshoot and debug complex issues to ensure system reliability.</li> <!--The individual list item itself within the "list"-->
             </ul>
     
             <hr>
@@ -45,7 +50,7 @@
     
             <p>Essential to have:</p>
     
-            <ul class="jobs_page_list">
+            <ul class="jobs_page_list"> <!--ul maeans unordered list-->
                 <li>Have a Bachelor's degree in Computer Science</li>
                 <li>Have five+ years expirence working as a python developer.</li>
                 <li>Have at least three years expirence in fron end web-development.</li>
@@ -62,26 +67,24 @@
             </ul>
         </section> 
     
-        <section class="jobs_page_section_2">
+        <section class="jobs_page_section_2"> <!--Used to style hover/border/visuals-->
             <h2>Senior Full Stack Web-Developer</h2> <!--Section does not conatin filler content at all-->
     
-            <div class="jobs_page_text">
             <p>Reference Number: SR71</p>
-            <P>Salary Range: $120,000-140,0000</P>
+            <P>Salary Range: $120,000-140,0000</p>
             <p>Reports to: Project Manager</p>
             <p>Location: Remote</p>
-            </div>
     
             <hr>
     
             <h3>What you will do</h3>
-            <p class="jobs_page_text_will_do">This job requires you to be an expirenced programmer and have a deep understanding of full stack web development.</p>
+            <p>This job requires you to be an expirenced programmer and have a deep understanding of full stack web development.</p>
     
             <hr>
     
             <h3>Key responsibilities</h3>
             <ul class="jobs_page_list"> <!--Change this description-->
-                <li>Develop and maintain scalable web applications across the front-end and back-end.</li> 
+                <li>Develop and maintain scalable web applications across the front-end and back-end.</li>
                 <li>Optimize performance and ensure security best practices in web applications.</li>
                 <li>Lead code reviews and mentor junior developers to uphold coding standards.</li>
                 <li>Manage CI/CD pipelines and automate deployments for efficient development workflows.</li>
@@ -103,7 +106,7 @@
     
             <p>Preferable to have:</p>
     
-            <ul class="jobs_page_list">
+            <ul class="jobs_page_list"> 
                 <li>C progarmming skills</li> <!--Change this to the actual position requirements-->
                 <li>Know the Django framework.</li>
                 <li>Know the flask framework.</li>
@@ -112,9 +115,9 @@
         </section>    
     </div>
 
-    <aside class="jobs_page_aside">
+    <aside class="jobs_page_aside"> <!--Content section that is used for related content to the main content, in this case to the section-->
         <h3>Why else should you join our company?</h3>
-        <ol class="jobs_page_list">
+        <ol class="jobs_page_list"> <!--ol maeans structured list-->
             <li>98 % Of our Employees are satisfied with their positions.</li>
             <li>We provide 4 weeks of paid annual leave.</li>
             <li>We provide 3 additional weeks of unpaid annual leave.</li>
@@ -122,8 +125,8 @@
             <li>We care deeply about our emplyees and offer two psycology appointments annually.</li>
         </ol>
     </aside>
-    <footer>
-        <p>&copy; 2025 Website name TBD. All rights reserved</p>
+    <footer> <!--At the bottom of the webpage, they contain copyright notices, author info, contact, disclaims or links-->
+        <p>&copy; 2025 Website name TBD. All rights reserved</p> <!--the &copy creates the copyright logo-->
     </footer>
 </body>
 </html>

@@ -25,10 +25,10 @@ a:link { text-decoration: none; }
 nav ul li a{display: flex; margin: 10px 20px 10px 20px;}
 
 body{
-    font-family: "poppins"; /*Be sure to add back-up font*/
-    margin: 0;
-    padding: 0;
-    line-height: 1.5;
+    font-family: "poppins"; /* Selects the font used. Be sure to add back-up font*/ 
+    margin: 0; /*Ensures browsers apply NO default margin*/
+    padding: 0; /*Gets rid of interanl spacing*/
+    line-height: 1.5; /*Vertical line spacing (text)*/
     background-color: #eaf4fb;
 }
 
@@ -41,65 +41,65 @@ body{
 /*Style the header better in next visit*/
 /*Put something to the left of the aside, look at examples for inspiration*/
 /*Think about how to style sticky element if I choose to do so*/
+/*Use different font for H1 element???? Check requirments again*/
 .header_jobs_page{ /*Should we make this universal could be different on other pages I guess?*/
     background-color: #a8dbfb; /*Colour not set in stone, BUT I think its pretty good ngl, should consider same themeing website wide (open to differing ideas)*/
-    text-align: center; 
+    text-align: center; /*Aligns test in the center*/
     padding: 1rem; /*Padding is the space between the text and element borders, used rem, is uniform and better for sacaling, think about changing everything to rem*/
-    border-bottom: 7px solid #1cb3ff;
-    transition: border-color 0.2s ease;
+    border-bottom: 7px solid #1cb3ff; /*Boder thickness is set to 7px and its color is solid light blue*/ 
+    transition: border-color 0.2s ease; 
 }
 
 .header_jobs_page:hover{border-bottom-color:#4df77d;}
 
 footer{ /*Add hover to text, color, again, is open to change as with other elements*/
     background-color: #a8dbfb; /*Footer should be universal accross all pages?*/
-    text-align: center;
-    padding: 10px;
+    text-align: center; 
+    padding: 10px; /*The space between an elements content and the border*/
     clear: both; /*Ensures that floated elements sit below the footer (aside caused trouble when I floated it right, which was a requirement*/
 }
 
 
 .jobs_sections_grouped{
     display: flex; /*Enables flexbox*/
-    gap: 20px;
+    gap: 20px; /*Adds 20 pixels of space inbetween both sections*/
     justify-content:center; /*Horizontally aligns items*/
 }
 
 .jobs_page_section_1, .jobs_page_section_2{
-    background-color: #f9feff;
+    background-color: #f9feff; /*Sets the background colour*/
     padding: 25px; /*should I do rem*/
     border-radius: 12px; /*Creates rounded edges*/
-    border-style: solid;
-    border-width: 2px;
-    width: 48%; 
-    margin-top: 25px;
-    box-sizing: border-box;
-    border-color: #1cb3ff;
-    transition: border-color 0.2s ease; /*The length of the transition between colours*/
+    border-style: solid; /*As the name imples makes the border solid*/
+    border-width: 2px; /*Specifies the width of the border*/
+    width: 48%; /*Sets the width of BOTH sections to 48% the width of the webpage*/
+    margin-top: 25px; /*Ensures space above an element here that space is 25px*/
+    box-sizing: border-box; /*makes the height/width of an element include padding, boder, and content(makes sections fit side by side better)*/
+    border-color: #1cb3ff; /*Original border colour befpre hovered over*/
+    transition: border-color 0.2s ease; /*The length of the transition between colours, ease is the transition style*/
 }
 
-.jobs_page_section_1:hover{border-color: #4df77d;}
+.jobs_page_section_1:hover{border-color: #4df77d;} /*Adds the hover property makes the sections change colour to green when hovered over*/
 .jobs_page_section_2:hover{border-color: #4df77d;}
 
 .jobs_page_list li{ /*Adding the Li means that only the INDIVIDUAL LISTS go bold one at a time!*/
     font-weight: normal;
-    transition: font-size 0.2s ease, font-weight 0.2s ease;
+    transition: font-size 0.2s ease, font-weight 0.2s ease; /*Defines transition parameters when hovered over*/
 }
 
-.jobs_page_list li:hover{
+.jobs_page_list li:hover{ /*Hover property (changes to transition parameters when hovered over*/
     font-size: 16.5px; /*Think about using em instead*/
-    color: #306683;
-    font-weight: 500;
+    color: #306683; /*The colour the text changes to*/
+    font-weight: 500; /*The thikness of the font*/
 } /*Removed the bolded hover feature for non-lists*/
 
 .jobs_page_aside{ /*Styles the aside*/
     background-color:#f9feff;
-    padding: 10px;
-    margin: 30px auto; 
-    border-bottom: 4px;
-    width: 25%;
-    float: right;
-    border-top: 4px solid #1cb3ff;
+    padding: 10px; /*The space between the content of the asides and the border*/
+    margin: 30px auto; /*Applies the margin property to all sides (margin is shorthand), As for "auto" it helps with dynamic sizing, flex can be used as alternative*/ 
+    width: 25%; /*The width of the aside*/
+    float: right; /*Tells asides the aside to move to the right of the parent element (in this case section 2) */
+    border-top: 4px solid #1cb3ff; /*The thickness of the top border, making they style solid and colour light blue*/
     transition: border-color 0.2s ease;
 }
 /*Add hover propery to headings on this page later?*/
