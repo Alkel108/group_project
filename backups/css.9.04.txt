@@ -1,52 +1,40 @@
+
 nav ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-}
+    
 
-nav{border-bottom: 7px solid #1cb3ff;
-    background-color: #1a1a1a; /* Dark background for nav */
-}
+    
 
-.button{ 
-    border:2px solid #1cb3ff;
+}
+nav{border-bottom: 7px solid #1cb3ff;}
+
+.button{ border:2px solid #1cb3ff;
     border-radius: 12px;
     width: 200px;
-    list-style-type: none;
-    background-color: #2a2a2a; /* Dark button background */
-}
-.button a{ 
-    display: flex; 
-    justify-content: center; 
-    align-content: center; 
-    padding-top: 12px;
-    color: #1cb3ff; /* Bright link color for visibility */
-}
+    list-style-type: none;}
+.button a{ display: flex; justify-content: center; align-content: center; padding-top: 12px;}
 
-nav ul li a{
-    color: #1cb3ff;
-}
-nav ul li:hover{ 
-    font-style: italic;
-    border:2px solid #4df77d;
-    background-color: #2a2a2a; /* Dark hover background */
-}
+nav ul li a{color: #1cb3ff;}
+nav ul li:hover{ font-style: italic;
+    border:2px solid #4df77d;}
 
 a:link { text-decoration: none; }
 
-nav ul li a{
-    display: flex; 
-    margin: 10px 20px 10px 20px;
-}
+nav ul li a{display: flex; margin: 10px 20px 10px 20px;}
 
 body{
     font-family: "poppins"; /* Selects the font used. Be sure to add back-up font*/ 
     margin: 0; /*Ensures browsers apply NO default margin*/
     padding: 0; /*Gets rid of interanl spacing*/
     line-height: 1.5; /*Vertical line spacing (text)*/
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color for contrast */
+    background-color: #eaf4fb;
 }
+
+
+
+
 
 /*Below code Jacob responsible for!!!*/  
 /*Do mobile optimisation*/
@@ -55,26 +43,21 @@ body{
 /*Think about how to style sticky element if I choose to do so*/
 /*Use different font for H1 element???? Check requirments again*/
 /**/
-
 .header_jobs_page{ /*Should we make this universal could be different on other pages I guess?*/
-    background-color: #1f1f1f; /* Dark header background */
+    background-color: #a8dbfb; /*Colour not set in stone, BUT I think its pretty good ngl, should consider same themeing website wide (open to differing ideas)*/
     text-align: center; /*Aligns test in the center*/
     padding: 1rem; /*Padding is the space between the text and element borders, used rem, is uniform and better for sacaling, think about changing everything to rem*/
     border-bottom: 7px solid #1cb3ff; /*Boder thickness is set to 7px and its color is solid light blue*/ 
     transition: border-color 0.2s ease; 
-    color: #e0e0e0;
 }
 
-.header_jobs_page:hover{
-    border-bottom-color:#4df77d;
-}
+.header_jobs_page:hover{border-bottom-color:#4df77d;}
 
 footer{ /*Add hover to text, color, again, is open to change as with other elements*/
-    background-color: #1f1f1f; /*Footer should be universal accross all pages?*/
+    background-color: #a8dbfb; /*Footer should be universal accross all pages?*/
     text-align: center; 
     padding: 10px; /*The space between an elements content and the border*/
     clear: both; /*Ensures that floated elements sit below the footer (aside caused trouble when I floated it right, which was a requirement*/
-    color: #e0e0e0;
 }
 
 
@@ -85,7 +68,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
 }
 
 .jobs_page_section_1, .jobs_page_section_2{
-    background-color: #1e1e1e; /*Sets the background colour to dark*/
+    background-color: #f9feff; /*Sets the background colour*/
     padding: 25px; /*should I do rem*/
     border-radius: 12px; /*Creates rounded edges*/
     border-style: solid; /*As the name imples makes the border solid*/
@@ -95,7 +78,6 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     box-sizing: border-box; /*makes the height/width of an element include padding, boder, and content(makes sections fit side by side better)*/
     border-color: #1cb3ff; /*Original border colour befpre hovered over*/
     transition: border-color 0.2s ease; /*The length of the transition between colours, ease is the transition style*/
-    color: #d6d6d6;
 }
 
 .jobs_page_section_1:hover{border-color: #4df77d;} /*Adds the hover property makes the sections change colour to green when hovered over*/
@@ -108,7 +90,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
 
 .jobs_page_list li:hover{ /*Hover property (changes to transition parameters when hovered over*/
     font-size: 16.5px; /*Think about using em instead*/
-    color: #4df77d; /*The colour the text changes to*/
+    color: #306683; /*The colour the text changes to*/
     font-weight: 500; /*The thikness of the font*/
 } /*Removed the bolded hover feature for non-lists*/
 
@@ -152,14 +134,13 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
 }
 
 .jobs_page_aside {
-    background-color: #1e1e1e;
+    background-color: #f9feff;
     padding: 10px;
     width: 25%;
     float: right;
     border-top: 4px solid #1cb3ff;
     transition: border-color 0.2s ease;
     box-sizing: border-box;
-    color: #d6d6d6;
 }
 
 .jobs_page_aside:hover {
@@ -168,7 +149,6 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
 
 .jobs_page_aside h3 {
     margin-bottom: 10px;
-    color: #1cb3ff;
 }
 
 .jobs_page_list {
