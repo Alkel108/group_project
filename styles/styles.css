@@ -93,14 +93,47 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     font-weight: 500; /*The thikness of the font*/
 } /*Removed the bolded hover feature for non-lists*/
 
-.jobs_page_aside{ /*Styles the aside*/
-    background-color:#f9feff;
-    padding: 10px; /*The space between the content of the asides and the border*/
-    margin: 30px auto; /*Applies the margin property to all sides (margin is shorthand), As for "auto" it helps with dynamic sizing, flex can be used as alternative*/ 
-    width: 25%; /*The width of the aside*/
-    float: right; /*Tells asides the aside to move to the right of the parent element (in this case section 2) */
-    border-top: 4px solid #1cb3ff; /*The thickness of the top border, making they style solid and colour light blue*/
-    transition: border-color 0.2s ease;
+.jobs_container {
+    width: 100%;
+    overflow: hidden; /* Clears the floats inside */
+    padding: 50px;/*The distance from the left to the image*/
+    box-sizing: border-box;
 }
-/*Add hover propery to headings on this page later?*/
-.jobs_page_aside:hover{border-top-color:#4df77d;} /*Just experimenting with hover here, MAYBE add more such hover borders*/
+
+.jobs_image-box {
+    float: left;
+    width: 55%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.jobs_image-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 17px; /*Rounds the edges*/
+}
+
+.jobs_page_aside {
+    background-color: #f9feff;
+    padding: 10px;
+    width: 25%;
+    float: right;
+    border-top: 4px solid #1cb3ff;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.jobs_page_aside:hover {
+    border-top-color: #4df77d;
+}
+
+.jobs_page_aside h3 {
+    margin-bottom: 10px;
+}
+
+.jobs_page_list {
+    list-style: decimal inside;
+    padding: 0;
+    margin: 0;
+}
