@@ -110,17 +110,18 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     padding: 10px;
     box-sizing: border-box; 
     animation: mySlide; /*CALL this in @keyframes*/
-    animation-duration: 4s; /*Anniamtion duration*/
-    animation-timing-function: ease-out;
-}
-
-/*For this code here, the prompt I used was: */
+    animation-duration: 1s; /*Anniamtion duration*/
+    animation-duration: 3s;
+    animation-fill-mode: forwards; /*Keeps animation in place after execution*/
+}   
+/*Find a way to make the animation start when I reach the image IF POSSIBLE WITHOUT JS that is*/
+/*For this code here, the prompt I used was: I want to animate the following would I need to animate the image like I have started? (PS I partially wrote code, then pasted into ChatGPT */
 @keyframes mySlide {
     from {
       transform: translateX(0); /* Start at original position */
     }
     to {
-      transform: translateX(20px); /* Move 20px to the right */
+      transform: translateX(45px); /* Move 20px to the right */
     }
   }
   
