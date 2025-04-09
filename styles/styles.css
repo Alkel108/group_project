@@ -115,7 +115,6 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     animation-fill-mode: forwards; /*Keeps animation in place after execution*/
 }   
 /*Find a way to make the animation start when I reach the image IF POSSIBLE WITHOUT JS that is*/
-/*For this code here, the prompt I used was: I want to animate the following would I need to animate the image like I have started? (PS I partially wrote code, then pasted into ChatGPT */
 @keyframes mySlide {
     from {
       transform: translateX(0); /* Start at original position */
@@ -131,6 +130,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     height: auto;
     display: block; /*Makes the image behave like a block?*/
     border-radius: 17px; /*Rounds the edges*/
+    /*ADD A HOVER FEATURE WHERE THE IMAGE INCREASES IN SIZE*/
 }
 
 .jobs_page_aside {
