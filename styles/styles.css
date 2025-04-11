@@ -1,35 +1,53 @@
-nav ul{
+nav {
+    border-bottom: 7px solid #1cb3ff;
+    border-top: 7px solid #1cb3ff;
+    background-color: #1a1a1a;
+    padding: 10px 30px;
+}
+
+#nav-container{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between; /* logo on left, links on right */
+    align-items: center;
+}
+#logospace{
+    width: 150px;
+}
+
+
+#logo img {
+    width: 150px;
+    object-fit: cover;
+    color: #4df77d;    
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
     justify-content: space-around;
+    gap: 150px; /* space between buttons */
+    margin: 0;
+    padding: 0;
 }
 
-nav{border-bottom: 7px solid #1cb3ff;
-    background-color: #1a1a1a; /* Dark background for nav */
-}
-
-.button{ 
-    border:2px solid #1cb3ff;
+.button {
+    border: 2px solid #1cb3ff;
     border-radius: 12px;
-    width: 200px;
-    list-style-type: none;
-    background-color: #2a2a2a; /* Dark button background */
-}
-.button a{ 
-    display: flex; 
-    justify-content: center; 
-    align-content: center; 
-    padding-top: 12px;
-    color: #1cb3ff; /* Bright link color for visibility */
+    background-color: #2a2a2a;
+    padding: 10px 20px;
 }
 
-nav ul li a{
+.button a {
     color: #1cb3ff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
 }
-nav ul li:hover{ 
+
+.button:hover {
     font-style: italic;
-    border:2px solid #4df77d;
-    background-color: #2a2a2a; /* Dark hover background */
+    border-color: #4df77d;
+
 }
 
 a:link { text-decoration: none; }
@@ -38,6 +56,7 @@ nav ul li a{
     display: flex; 
     margin: 10px 20px 10px 20px;
 }
+img{width: 150px;}
 
 body{
     font-family: "poppins"; /* Selects the font used. Be sure to add back-up font*/ 
