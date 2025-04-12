@@ -1,6 +1,6 @@
 nav {
-    border-bottom: 7px solid #1cb3ff;
-    border-top: 7px solid #1cb3ff;
+    border-bottom: 7px solid #00496d;
+    border-top: 7px solid #00496d;
     background-color: #1a1a1a;
     padding: 10px 30px;
 }
@@ -13,7 +13,7 @@ nav {
 #logospace{
     width: 5vw;
     list-style: none;
-    border: 2px solid #1cb3ff;
+    border: 2px solid #00496d;
     border-radius: 12px;
     padding: 10px 10px 10px 10px;
     background-color: #2a2a2a;
@@ -23,7 +23,7 @@ nav {
 
     display:flex;
     text-decoration: none;
-    color: #1cb3ff;
+    color: #00496d;
     justify-content: center;
     font-size: 1.2vw;
 }
@@ -47,7 +47,7 @@ nav ul {
 }
 
 .button {
-    border: 2px solid #1cb3ff;
+    border: 2px solid #00496d;
     border-radius: 12px;
     background-color: #2a2a2a;
     padding: 10px 10px -10px -10px;
@@ -55,7 +55,7 @@ nav ul {
 }
 
 .button a {
-    color: #1cb3ff;
+    color: #00496d;
     text-decoration: none;
     display: flex;
     justify-content: center;
@@ -93,7 +93,7 @@ body{
     background-color: #1f1f1f; /* Dark header background */
     text-align: center; /*Aligns test in the center*/
     padding: 1rem; /*Padding is the space between the text and element borders, used rem, is uniform and better for sacaling, think about changing everything to rem*/
-    border-bottom: 7px solid #1cb3ff; /*Boder thickness is set to 7px and its color is solid light blue*/ 
+    border-bottom: 2px solid #00496d;/*EDIT: Changed thickness to 2px, 7 was a bit overwhelming I reakon, open to reversion*/ /*Boder thickness is set to 7px and its color is solid light blue*/ 
     transition: border-color 0.2s ease; 
     color: #e0e0e0;
 }
@@ -127,7 +127,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     width: 48%; /*Sets the width of BOTH sections to 48% the width of the webpage*/
     margin-top: 25px; /*Ensures space above an element here that space is 25px*/
     box-sizing: border-box; /*makes the height/width of an element include padding, boder, and content(makes sections fit side by side better)*/
-    border-color: #1cb3ff; /*Original border colour befpre hovered over*/
+    border-color: #00496d; /*Original border colour befpre hovered over*/
     transition: border-color 0.2s ease; /*The length of the transition between colours, ease is the transition style*/
     color: #d6d6d6;
 }
@@ -189,7 +189,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     padding: 10px;
     width: 25%;
     float: right;
-    border-top: 4px solid #1cb3ff;
+    border-top: 4px solid #00496d;
     transition: border-color 0.2s ease;
     box-sizing: border-box;
     color: #d6d6d6;
@@ -201,7 +201,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
 
 .jobs_page_aside h3 {
     margin-bottom: 10px;
-    color: #1cb3ff;
+    color: #00496d;
 }
 
 #jobs_page_list_ol {
