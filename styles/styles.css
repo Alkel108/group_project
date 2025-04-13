@@ -66,7 +66,7 @@ body {
     
 }
 #nexttoshark{
-    width: 60%;
+    width: 80%;
     border: #1cb3ff 2px solid;
     border-radius: 12px;
     margin-left: 25px;
@@ -112,7 +112,7 @@ nav ul {
     margin: 25px;
     padding: 25px 25px 25px 25px;
     width: 42vw;
-    height: 200px;
+    
     line-height: 3em;
 }
 
