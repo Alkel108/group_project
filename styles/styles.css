@@ -234,6 +234,91 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     font-weight: 500; 
 }
 
+/* --------------------------------------------------- css for apply.html page---------------------------------------------------------- */
+main {
+    max-width: 800px; 
+    margin: 2em auto;   /* use auto to center the margine */
+    padding: 2em;   /* */
+    background-color: #1e1e1e;  /* put backgroung to dark color */
+    border-radius: 12px;    /* making corners rounded and with 12 px radius */
+    border: 2px solid #1cb3ff;  /* making border solid and put color to light blue  */
+    color: #e0e0e0;     /* changing the text color */
+    box-shadow: 0 0 30px rgba(28, 179, 255, 0.2);   /* gives a little glowing shadow effect in the border */
+}
+
+
+form {
+    display: flex;  /* puting the flexbox layout to the form */
+    flex-direction: column; /* arrange the elements in the form */
+    gap: 1.5em; /* adding the spacing between each element in the form */
+}
+
+label {
+    font-weight: bold;  /* making the text in the lable bold */
+    margin-top: 0.5em;  /* adding the space between each lable  */
+    color: #1cb3ff;     /* making the lanle color to light blue  */
+}
+
+
+input[type="text"], 
+input[type="email"],    
+input[type="tel"],  
+input[type="date"], 
+select,     /* by selecting above input types called text, email, tel, and date it will use below stlying for all places that these inputs are use in apply.html   */
+textarea {
+    padding: 0.8em;
+    background-color: #2a2a2a;  
+    border: 1px solid #555;     /* add a lightly dark gray outline around the fields */
+    border-radius: 8px;     /* rounding the cornes in the fields */
+    color: #e0e0e0;     /* putting the text to a light color  */
+    font-size: 1em;    
+}   
+
+
+input:focus,        /* by using focus, when someone click one of input or select or text area options in the form it will change according to this */
+select:focus,       
+textarea:focus {       
+    outline: none;      
+    border-color: #4df77d;      /* putting the color to light green  */
+    box-shadow: 0 0 5px #4df77d;    /* making the small shadow around the box */
+}
+
+
+fieldset {
+    border: 1px solid #1cb3ff;  
+    border-radius: 10px;    /* making the corners rounded */
+    padding: 1.5em;     
+}
+
+
+legend {
+    font-weight: bold;  /* converting to the bold text */
+    font-size: 1.1em;   /* changin the font size to 1.1 times the original size */
+    color: #1cb3ff; /* changhin the color to a light blue */
+}
+
+
+button {
+    background-color: #1cb3ff;  
+    color: #121212;     /* changing the text color inside the button to a dark color  */
+    padding: 0.8em 2em;     /* */
+    border: none;       /* removing the default border */
+    border-radius: 10px;        /* making the corners round in the border */
+    cursor: pointer;        /* when hovering the border cursor will change in to the pointer */
+    font-size: 1em;    
+    font-weight: bold;      /* making the text bold in the border */
+    transition: background-color 0.3s ease, color 0.3s ease;   /* this makes a soomth transition when hover */
+}
+
+
+button:hover {
+    background-color: #4df77d;  /* making the background color change when hover */
+    color: #121212;     /* even in hover this makes the text color same as before  */   
+}
+
+
+
+
 /*Below is About page code*/
 
 /*FIX THIS*/
