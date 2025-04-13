@@ -323,7 +323,7 @@ legend {
 button {
     background-color: #1cb3ff;  
     color: #121212;     /* changing the text color inside the button to a dark color  */
-    padding: 0.8em 2em;     /* */
+    padding: 0.8em 2em;     
     border: none;       /* removing the default border */
     border-radius: 10px;        /* making the corners round in the border */
     cursor: pointer;        /* when hovering the border cursor will change in to the pointer */
