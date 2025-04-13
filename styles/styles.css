@@ -45,17 +45,35 @@ body {
     background-repeat: no-repeat;
     background-position: center;
   }
-#homepage{ height: 600px;
+#homepage{ height: 400px;
     line-height: 50px;
     
     padding-left: 50px;
-    padding-top: 200px;
-    font-size: 30px;
+    padding-top: 100px;
+    font-size: 20px;
     
     
     }
-
-
+#sharkeat {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    border: #1cb3ff 2px solid;
+    border-radius: 12px;
+    margin-left: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+}
+#nexttoshark{
+    width: 60%;
+    border: #1cb3ff 2px solid;
+    border-radius: 12px;
+    margin-left: 25px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-left: 50px;
+    padding-top: 100px;}
 nav ul {
     display: flex;
     
@@ -84,15 +102,20 @@ nav ul {
 
 }
 .centeredsection{
-    display: inline-block;
+    flex: 1;
+    padding: 2rem;
+    
+
+    
     border: 2px solid #1cb3ff;
     border-radius: 12px;
     margin: 25px;
     padding: 25px 25px 25px 25px;
     width: 42vw;
-    height: 500px;
-    line-height: 2em;
+    height: 200px;
+    line-height: 3em;
 }
+
 .centeredsection h2{ display: block;}
 .centeredsection p{ display: block;}
 
@@ -102,7 +125,10 @@ nav ul {
 
 }
 
-
+#maincontainer
+{ display: flex;
+    align-items: stretch; /* Makes both columns equal height */
+    gap: 2rem; /*  spacing between columns */}
 
 a:link { text-decoration: none; }
 
