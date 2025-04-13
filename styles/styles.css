@@ -26,7 +26,9 @@ nav {
     justify-content: center;
     font-size: clamp(.4rem, 1.2vw, 1.1rem);
 }
-
+#logospace:hover{
+    border-color: #4df77d;
+}
 
 #logo img {
     width: 100px;
@@ -58,13 +60,27 @@ nav ul {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    font-size: clamp(.4rem, 1.2vw, 1.1rem);}
+    font-size: clamp(.4rem, 1.2vw, 1.1rem);
+    
+
+}
+.centeredsection{
+    
+    border: 2px solid #1cb3ff;
+    border-radius: 12px;
+    margin:25px;
+    padding: 25px;
+}
+.centeredsection h2{ display: block;}
+.centeredsection p{ display: block;}
 
 .button:hover {
-    font-style: italic;
+   
     border-color: #4df77d;
 
 }
+
+
 
 a:link { text-decoration: none; }
 
