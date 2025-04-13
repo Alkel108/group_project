@@ -320,17 +320,9 @@ button:hover {
 
 
 /*Below is About page code*/
-
+/*Once deal with htmnl find way to style the heading of the nested list "Group Information" and "Student IDs" to make Special Gothic Expanded One font*
+/*Style table/images*/
 /*FIX THIS*/
-.about_subtitle_list li{
-    font-weight: normal;
-    transition: font-size 0.2s ease, font-weight 0.2s ease; 
-}
 
-.about_subtitle_list li:hover{
-    font-size: 16.5px; /*Think about using em instead*/
-    color: #4df77d; /*The colour the text changes to*/
-    font-weight: 500; /*The thikness of the font*/
-}
 
 
