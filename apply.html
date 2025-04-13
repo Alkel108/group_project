@@ -19,122 +19,117 @@
 
     <!-- navigation menu -->
     <nav>
-        <div id="nav-container">
-  
-  
-  
-  
-  
-  
-  
-          <div id="logo">
-            <a href="index.html"><img src="images/logo.png" alt="SharkSec Logo"></a>
-          </div>
-  
-          <ul >
-            <li class="button"><a href="jobs.html">Job listings</a></li>
-            <li class="button"><a href="apply.html">Apply for a job</a></li>
-            <li class="button"><a href="about.html">About us</a></li>
-          </ul>
-  
-          <div id="logospace"><li ><a href="mailto:sharksecurity@example.com"> Email us</a></li></div>
-  
+      <div id="nav-container">
+
+        <div id="logo">
+          <a href="index.html"><img src="images/logo.png" alt="SharkSec Logo" /></a>
         </div>
-      </nav>
 
- 
+        <ul>
+          <li class="button"><a href="jobs.html">Job listings</a></li>
+          <li class="button"><a href="apply.html">Apply for a job</a></li>
+          <li class="button"><a href="about.html">About us</a></li>
+        </ul>
+
+        <div id="logospace">
+          <li><a href="mailto:sharksecurity@example.com"> Email us</a></li>
+        </div>
+
+      </div>
+    </nav>
+  </header>
+
   <main>
-      <h2 id="apply-heading">Job Application Form</h2>
+    <h2 id="apply-heading">Job Application Form</h2>
 
-      <!-- start of the application form - sends data to test server -->
-      <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
-        
-        <!-- job reference  -->
-        <label >Job Reference Number:</label>
-        <select required>
-          <option >Select a job</option>
-          <!--selecting job options-->
-          <option value="G01">G01 - Software Developer</option>
-          <option value="G02">G02 - Network Administrator</option>
-          <option value="G03">G03 - Data Analyst</option>
-          <option value="G04">G04 - Cybersecurity Specialist</option>
-          <option value="G05">G05 - IT Support Technician</option>
-          <option value="G06">G06 - Cloud Engineer</option>
-          <option value="G07">G07 - AI/ML Engineer</option>
-        </select>
+    <!-- sends data to test server -->
+    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+      
+      <!-- job reference  -->
+      <label for="jobref">Job Reference Number:</label>
+      <select id="jobref" name="jobref" required>
+        <option value="">Select a job</option>
+        <!--selecting job options-->
+        <option value="G01">G01 - Software Developer</option>
+        <option value="G02">G02 - Network Administrator</option>
+        <option value="G03">G03 - Data Analyst</option>
+        <option value="G04">G04 - Cybersecurity Specialist</option>
+        <option value="G05">G05 - IT Support Technician</option>
+        <option value="G06">G06 - Cloud Engineer</option>
+        <option value="G07">G07 - AI/ML Engineer</option>
+      </select>
 
-        <!-- input for first Name  -->
-        <label for="fname">First Name:</label>
-        <input type="text" maxlength="20" pattern="[A-Za-z]+" required />
+      <!-- input for first Name  -->
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname" maxlength="20" pattern="[A-Za-z\s\-]+" required />
 
-        <!-- input for last Name -->
-        <label for="lname">Last Name:</label>
-        <input type="text" maxlength="20" pattern="[A-Za-z]+" required />
+      <!-- input for last Name -->
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname" maxlength="20" pattern="[A-Za-z\s\-]+" required />
 
-        <!-- input for date of Birth -->
-        <label for="dob">Date of Birth:</label>
-        <input type="date" required />
+      <!-- input for date of Birth -->
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required />
 
-        <!-- Gender selection  -->
-        <fieldset>
-          <legend>Gender</legend>
-          <label><input type="radio" value="Male" required /> Male</label>
-          <label><input type="radio" value="Female" /> Female</label>
-          <label><input type="radio" value="Other" /> Other</label>
-        </fieldset>
+      <!-- Gender selection  -->
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="Male" required /> Male</label>
+        <label><input type="radio" name="gender" value="Female" /> Female</label>
+        <label><input type="radio" name="gender" value="Other" /> Other</label>
+      </fieldset>
 
-        <!-- Address fields -->
-        <label>Street Address:</label>
-        <input type="text" maxlength="40" required />
+      <!-- Address fields -->
+      <label for="address">Street Address:</label>
+      <input type="text" id="address" name="address" maxlength="40" required />
 
-        <label>Suburb/Town:</label>
-        <input type="text" maxlength="40" required />
+      <label for="suburb">Suburb/Town:</label>
+      <input type="text" id="suburb" name="suburb" maxlength="40" required />
 
-        <!-- State dropdown with state codes -->
-        <label>State:</label>
-        <select required>
-          <option value="" disabled selected>Select a state</option>
-          <option value="VIC">VIC</option>
-          <option value="NSW">NSW</option>
-          <option value="QLD">QLD</option>
-          <option value="NT">NT</option>
-          <option value="WA">WA</option>
-          <option value="SA">SA</option>
-          <option value="TAS">TAS</option>
-          <option value="ACT">ACT</option>
-        </select>
+      <!-- State dropdown with state codes -->
+      <label for="state">State:</label>
+      <select id="state" name="state" required>
+        <option value="" disabled selected>Select a state</option>
+        <option value="VIC">VIC</option>
+        <option value="NSW">NSW</option>
+        <option value="QLD">QLD</option>
+        <option value="NT">NT</option>
+        <option value="WA">WA</option>
+        <option value="SA">SA</option>
+        <option value="TAS">TAS</option>
+        <option value="ACT">ACT</option>
+      </select>
 
-        <!-- input for postcode (for 4 digits) -->
-        <label>Postcode:</label>
-        <input type="text" pattern="\d{4}" maxlength="4" required />
+      <!-- input for postcode (for 4 digits) -->
+      <label for="postcode">Postcode:</label>
+      <input type="text" id="postcode" name="postcode" pattern="\d{4}" maxlength="4" required />
 
-        <!-- input for email -->
-        <label for="email">Email:</label>
-        <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
+      <!-- input for email -->
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required />
 
-        <!-- input for phone number (8-12 digits) -->
-        <label for="phone">Phone:</label>
-        <input type="tel" id="phone" name="phone" pattern="[0-9 ]{8,12}" required />
+      <!-- input for phone number (8-12 digits) -->
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" name="phone" pattern="[0-9 ]{8,12}" required />
 
-        <!-- checkboxes technical skill (need to select at least one) -->
-        <fieldset>
-          <legend>Technical Skills (Select all that apply):</legend>
-          <label><input type="checkbox" name="skills" value="HTML" required /> HTML</label>
-          <label><input type="checkbox" name="skills" value="CSS" /> CSS</label>
-          <label><input type="checkbox" name="skills" value="JavaScript" /> JavaScript</label>
-          <label><input type="checkbox" name="skills" value="Python" /> Python</label>
-          <label><input type="checkbox" name="skills" value="Java" /> Java</label>
-          <label><input type="checkbox" name="skills" value="SQL" /> SQL</label>
-        </fieldset>
+      <!-- checkboxes technical skill (need to select at least one) -->
+      <fieldset>
+        <legend>Technical Skills (Select all that apply):</legend>
+        <label><input type="checkbox" name="skills[]" value="HTML" /> HTML</label>
+        <label><input type="checkbox" name="skills[]" value="CSS" /> CSS</label>
+        <label><input type="checkbox" name="skills[]" value="JavaScript" /> JavaScript</label>
+        <label><input type="checkbox" name="skills[]" value="Python" /> Python</label>
+        <label><input type="checkbox" name="skills[]" value="Java" /> Java</label>
+        <label><input type="checkbox" name="skills[]" value="SQL" /> SQL</label>
+      </fieldset>
 
-        <!-- textarea for additional skills part-->
-        <label >Other Skills:</label>
-        <textarea rows="4" cols="40" placeholder="Tell us more about your other skills..."></textarea>
+      <!-- textarea for additional skills part-->
+      <label for="otherskills">Other Skills:</label>
+      <textarea id="otherskills" name="otherskills" rows="4" cols="40" placeholder="Tell us more about your other skills..."></textarea>
 
-        <!-- apply button -->
-        <button type="submit">Apply</button>
-      </form>
-    </section>
+      <!-- apply button -->
+      <button type="submit">Apply</button>
+    </form>
   </main>
 
   <!-- the footer-->
