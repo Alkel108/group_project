@@ -346,5 +346,11 @@ button:hover {
 /*Style table/images*/
 /*FIX THIS*/
 
+#Group_information_list,
+#Student_IDs_list {
+    font-family: "Special Gothic Expanded One";
+}
+
+
 
 

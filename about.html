@@ -66,15 +66,34 @@
             </dl>
         </section>
     </div>
-        
-            <!--Discuss hopw to structure table-->
-            <td>
-                <tr>
-                    <th>Name</th>
-                </tr>
-                <tr>
-                    <td>What are the members interests</td>
-                </tr>
-            </td>
-        </body>
-        </html>
+
+    <!--Used Gen AI to modify table to includea caption and merged cell 
+    Prompt: Change this [pre-existing table html without merged cell/caption] to align with this: HTML table (Most have cell or row merged with a caption)-->
+    <!--STYLE THIS CODE!-->
+    <table border="1">
+        <caption>Group member interests</caption>
+        <tr>
+          <th>Name</th>
+          <th>Interests</th>
+        </tr>
+        <tr>
+          <td>Jacob Liemareff</td>
+          <td>I am quite the 1900s history buff</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Bob</td>
+          <td>25</td>
+          <td>Los Angeles</td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>San Francisco</td>
+        </tr>
+        <tr>
+          <td colspan="3">This is our team</td>
+        </tr>
+      </table>
+      
+      
+</body>
+</html>
