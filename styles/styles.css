@@ -12,11 +12,14 @@ body {
     line-height: 1.5em; /*Vertical line spacing (text)*/
     background-color: #121212; /* Dark background */
     color: #e0e0e0; /* Light text color for contrast */
+    
+    
 }
 html, body {
     height: 100%; /* make html and body stretch to fill window */
     display: flex;
     flex-direction: column;
+    min-width: 768px;
 }
 
 h1 {font: normal 2em "Special Gothic Expanded One";}
@@ -49,7 +52,6 @@ nav ul li a {
     display: flex; 
     margin: 10px 20px 10px 20px;
 }
-
 #emailus {
     width: 5vw;
     list-style: none;
@@ -65,16 +67,18 @@ nav ul li a {
     justify-content: center;
     font-size: clamp(.4rem, 1.2vw, 1.1rem);
 }
-#emailus:hover{
+/* change border colour on hover */
+#emailus:hover, .button:hover, .centeredsection:hover, #nexttoshark:hover {
     border-color: #4df77d;
 }
-
 #logo img {
     width: 100px;
     object-fit: cover;
     color: #4df77d;    
 }
-#logo a:hover{ filter: hue-rotate(-90deg);}
+#logo a:hover, #sharkeat:hover{ filter: hue-rotate(-90deg);}
+
+#sharkeat:hover{ transition: filter 1s ease;} /* ease into colour */
 
 #homepage{ height: 400px;
     line-height: 50px;
@@ -86,15 +90,13 @@ nav ul li a {
 #sharkeat {
     display: flex;
     justify-content: center;
-    width: clamp(300px, 50vw, 500px);
+    width: clamp(300px, 50vw, 900px);
     
     border-radius: 12px;
     margin-left: 25px;
     margin-top: 100px;
     margin-bottom: 100px;
     flex: 1;
-    
-    
     
 }
 
@@ -107,8 +109,10 @@ nav ul li a {
     margin-bottom: 100px;
     padding-left: 50px;
     padding-top: 25px;
+    font-size: 20PX;
+    
 }
-
+#nexttoshark li{ padding-top: 20px;}
 .button {
     border: 2px solid #1cb3ff;
     border-radius: 12px;
@@ -132,17 +136,14 @@ nav ul li a {
     margin: 25px;
     padding: 25px 25px 25px 25px;
     width: 42vw;
-    
-    line-height: 3em;
+    font-size: 20px;
+    line-height: 2.5em;
 }
 
-.centeredsection h2{ display: block;}
-.centeredsection p{ display: block;}
+.centeredsection li, #nexttoshark li{  margin-bottom: 20px}
+.centeredsection h2, p{ display: block;}
 
-.button:hover {
-   
-    border-color: #4df77d;
-}
+
 
 #maincontainer
 { display: flex;
