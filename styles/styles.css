@@ -3,6 +3,7 @@
 body {
     
     background-image: url('../images/sharkbackground.png');
+    /* Make a background image that would be fitting this home page (screenshot of the website) */
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
@@ -39,7 +40,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     color: #e0e0e0;
     width: 100%;
 }
-footer a{ color: #1cb3ff;}
+footer a{ text-decoration: none;}
 
 /* ---------- menu ---------- */
 #nav-container{
@@ -51,8 +52,10 @@ nav {
     border-bottom: 2px solid #1cb3ff;
     background-color: #1a1a1a;
     padding: 10px 30px;
+    flex-direction: row;
 }
 nav ul {
+    
     display: flex;
     list-style: none;
     justify-content: space-around;
@@ -168,7 +171,12 @@ nav ul li a {
     align-items: stretch; /* Makes both columns equal height */
     gap: 2rem; /*  spacing between columns */
 }
-
+#secondmaincontainer
+{ display: flex;
+    align-items: stretch; /* Makes both columns equal height */
+    gap: 2rem; /*  spacing between columns */
+    margin-right: 30px;
+}
 
 /* --------------------------------------------------- jobs.html styling ---------------------------------------------------------- */
 
