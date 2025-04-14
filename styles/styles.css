@@ -87,12 +87,14 @@ nav ul li a {
     display: flex;
     justify-content: center;
     width: clamp(300px, 50vw, 500px);
-    border: #1cb3ff 2px solid;
+    
     border-radius: 12px;
     margin-left: 25px;
     margin-top: 100px;
     margin-bottom: 100px;
     flex: 1;
+    
+    
     
 }
 
@@ -174,6 +176,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     clear: both; /*Ensures that floated elements sit below the footer (aside caused trouble when I floated it right, which was a requirement*/
     color: #e0e0e0;
     width: 100%;
+    
     
 }
 
