@@ -392,17 +392,21 @@ Prompt: when styling a table how would I make the caption sit on top of the tabl
     border-radius: 12px; /*Why not working*/
     width: 90%; /* Adjust table width if needed */
     margin: auto; /* no flex-box as that would need container, this is easier (saves time as this was styled close to deadline) */;
-    background-color:#1f1f1f ;
+    margin-top: 80px; /*Adds space between table and above element*/
+    margin-bottom: 80px;
+    background-color:#1f1f1f;
 }
 
 #about_table th {
     height: 50px;
     border-color: #1cb3ff;
+    background-color: #062331;
     transition: border-color 0.2s ease;
 }
 
 #about_table th:hover {
-    border-color: #4df77d
+    border-color: #4df77d;
+    background-color: #0c4864;
 }
 
 #about_table td {
