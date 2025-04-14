@@ -13,6 +13,12 @@ body {
     background-color: #121212; /* Dark background */
     color: #e0e0e0; /* Light text color for contrast */
 }
+html, body {
+    height: 100%; /* make html and body stretch to fill window */
+    display: flex;
+    flex-direction: column;
+}
+
 h1 {font: normal 2em "Special Gothic Expanded One";}
 h2 {font: normal 1.5em "Special Gothic Expanded One";}
 h3 {font: normal 1em "Special Gothic Expanded One";}
@@ -72,7 +78,7 @@ nav ul li a {
 
 #homepage{ height: 400px;
     line-height: 50px;
-    
+    flex: 1;
     padding-left: 50px;
     padding-top: 100px;
     font-size: 20px;
@@ -80,14 +86,16 @@ nav ul li a {
 #sharkeat {
     display: flex;
     justify-content: center;
-    width: 500px;
+    width: clamp(300px, 50vw, 500px);
     border: #1cb3ff 2px solid;
     border-radius: 12px;
     margin-left: 25px;
     margin-top: 100px;
     margin-bottom: 100px;
+    flex: 1;
     
 }
+
 #nexttoshark {
     width: 80%;
     border: #1cb3ff 2px solid;
@@ -96,7 +104,7 @@ nav ul li a {
     margin-top: 100px;
     margin-bottom: 100px;
     padding-left: 50px;
-    padding-top: 100px;
+    padding-top: 25px;
 }
 
 .button {
@@ -165,6 +173,8 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     padding: 10px; /*The space between an elements content and the border*/
     clear: both; /*Ensures that floated elements sit below the footer (aside caused trouble when I floated it right, which was a requirement*/
     color: #e0e0e0;
+    width: 100%;
+    
 }
 
 
@@ -186,6 +196,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     border-color: #1cb3ff; /*Original border colour befpre hovered over*/
     transition: border-color 0.2s ease; /*The length of the transition between colours, ease is the transition style*/
     color: #d6d6d6;
+    
 }
 
 .jobs_page_section_1:hover{border-color: #4df77d;} /*Adds the hover property makes the sections change colour to green when hovered over*/
@@ -210,6 +221,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     overflow: hidden; /* Clears the floats inside */
     padding: 50px;/*The distance from the left to the image*/
     box-sizing: border-box; /*makes the height/width of an element include padding, boder, and content(makes sections fit side by side better)*/
+    min-height: 100vh;
 }
 
 .jobs_image-box { /*This relates to the div encasing the image itself*/
@@ -221,6 +233,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     animation-duration: 1s; /*Anniamtion duration*/
     animation-duration: 3s;
     animation-fill-mode: forwards; /*Keeps animation in place after execution*/
+    
 }   
 /*Impossible to make the animation start when I reach the image without JS, but I chose to leave this for personal future experimentation*/
 /*So currently the image does slide accross, however when you refresh the page (to see it you have to refresh while viewing img*/
@@ -282,6 +295,7 @@ main {
     border: 2px solid #1cb3ff;  /* making border solid and put color to light blue  */
     color: #e0e0e0;     /* changing the text color */
     box-shadow: 0 0 30px rgba(28, 179, 255, 0.2);   /* gives a little glowing shadow effect in the border */
+    flex: 1; /* take up space vertically */
 }
 
 
@@ -384,6 +398,7 @@ Prompt: when styling a table how would I make the caption sit on top of the tabl
     margin-top: 80px; /*Adds space between table and above element*/
     margin-bottom: 80px;
     background-color:#1f1f1f;
+    flex: 1;
 }
 
 #about_table th {
