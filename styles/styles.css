@@ -375,7 +375,7 @@ button:hover {
 /*Once deal with htmnl find way to style the heading of the nested list "Group Information" and "Student IDs" to make Special Gothic Expanded One font*
 /*Style table/images*/
 /*FIX THIS*/
-.jobs_page_list dt {
+.jobs_page_list dd {
     font-weight: normal;
     transition: font-size 0.2s ease, font-weight 0.2s ease; /*Defines transition parameters when hovered over*/
 }
@@ -396,7 +396,7 @@ Prompt: when styling a table how would I make the caption sit on top of the tabl
     width: 90%; /* Adjust table width if needed */
     margin: auto; /* no flex-box as that would need container, this is easier (saves time as this was styled close to deadline) */;
     margin-top: 80px; /*Adds space between table and above element*/
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     background-color:#1f1f1f;
     flex: 1;
 }
@@ -417,6 +417,7 @@ Prompt: when styling a table how would I make the caption sit on top of the tabl
     background-color: #1f1f1f;
     transition: background-color 0.2s ease;  /*Defines transition parameters when hovered over*/
     height: 50px;
+    padding: 0.5em;
 }
 
 #about_table td:hover {
@@ -424,6 +425,22 @@ Prompt: when styling a table how would I make the caption sit on top of the tabl
     background-color: #353535; /*The colour the text changes to*/
     font-weight: 500;
 }
+
+
+/*The following two blocks of code are made with Gen AI.
+ Prompt: "On my table the interests section is split in half but not evenly how to fix: Here HTML:" (I gave Chat GPT my existing HTML)
+ Prompt: "now the name section is too small" followed up with "surely there is a more easy way weith less code, all I want is for the name section to be bigger"
+ It gave me the following CSS outputs, which I modified. */
+#about_table td:nth-child(2),
+#about_table td:nth-child(3) {
+  width: 30%;
+}
+
+#about_table td:first-child,
+#about_table th:first-child {
+  width: 20%;
+}
+
 
 #about_table_caption {
     caption-side: top; /* Ensures the caption sits above the table */
@@ -435,30 +452,30 @@ Prompt: when styling a table how would I make the caption sit on top of the tabl
 /*Gen AI code. Prompt: "How would I make three images go in the middle of a webpage, 
 horizontally aligned, but centered in he middle and add heading to each of the images"*/
 /* Ensures the container fills the viewport and centers content */
+/*Then prompted again: "they are still stacked vertically"*/
 #about_image-container {
     display: flex;
-    flex-direction: row; /* Aligns items horizontally */
-    justify-content: center; /* Centers items horizontally */
-    align-items: center; /* Centers items vertically */
-    height: 100vh; /* Makes the container fill the viewport height */
+    flex-direction: row; /* Ensures horizontal alignment */
+    justify-content: center;
+    align-items: center; /* Centers vertically */
+    gap: 150px; /* Adds space between items */
+    margin-bottom: 50px;
+    margin-top: 50px /*Space from above element*/
+    
 }
 
-/* Styles individual image and heading blocks */
 .about_image-item {
-    text-align: center; /* Aligns the heading and image in the center */
-    margin: 0 20px; /* Adds spacing between each image block */
+    text-align: center;
 }
 
-/* Ensures images maintain proper size and aspect ratio */
 .about_image-item img {
-    max-width: 100%; /* Prevents images from exceeding their container */
-    width: 150px; /* Adjust the width as needed */
-    height: auto; /* Maintains the aspect ratio of images */
+    max-width: 230px; /* Adjust to scale images down */
+    height: auto;
+    border-radius: 12px;
 }
 
-/* Customizes the heading styles */
 .about_image-item h3 {
-    margin-bottom: 10px; /* Adds space between the heading and the image */
+    margin-bottom: 10px;
 }
 
 
