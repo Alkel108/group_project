@@ -417,6 +417,35 @@ Prompt: when styling a table how would I make the caption sit on top of the tabl
     margin-bottom: 10px; /* Add spacing below the caption */
 }
 
+/*Gen AI code. Prompt: "How would I make three images go in the middle of a webpage, 
+horizontally aligned, but centered in he middle and add heading to each of the images"*/
+/* Ensures the container fills the viewport and centers content */
+#about_image-container {
+    display: flex;
+    flex-direction: row; /* Aligns items horizontally */
+    justify-content: center; /* Centers items horizontally */
+    align-items: center; /* Centers items vertically */
+    height: 100vh; /* Makes the container fill the viewport height */
+}
+
+/* Styles individual image and heading blocks */
+.about_image-item {
+    text-align: center; /* Aligns the heading and image in the center */
+    margin: 0 20px; /* Adds spacing between each image block */
+}
+
+/* Ensures images maintain proper size and aspect ratio */
+.about_image-item img {
+    max-width: 100%; /* Prevents images from exceeding their container */
+    width: 150px; /* Adjust the width as needed */
+    height: auto; /* Maintains the aspect ratio of images */
+}
+
+/* Customizes the heading styles */
+.about_image-item h3 {
+    margin-bottom: 10px; /* Adds space between the heading and the image */
+}
+
 
 
 
