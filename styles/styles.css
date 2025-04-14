@@ -1,33 +1,65 @@
-nav {
-    border-bottom: 2px solid #1cb3ff;
-    
-    background-color: #1a1a1a;
-    padding: 10px 30px;
+body {
+    margin: 0;
+    background-image: url('../images/sharkbackground.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    font-family: "Special Gothic"; /* (Was Popins) Selects the font used. Be sure to add back-up font*/ 
+    margin: 0; /*Ensures browsers apply NO default margin*/
+    padding: 0; /*Gets rid of interanl spacing*/
+    line-height: 1.5em; /*Vertical line spacing (text)*/
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for contrast */
 }
+h1 {font: normal 2em "Special Gothic Expanded One";}
+h2 {font: normal 1.5em "Special Gothic Expanded One";}
+h3 {font: normal 1em "Special Gothic Expanded One";}
 
 #nav-container{
     display: flex;
     justify-content: space-between; /* logo on left, links on right */
     align-items: center;
 }
-#logospace{
+nav {
+    border-bottom: 2px solid #1cb3ff;
+    
+    background-color: #1a1a1a;
+    padding: 10px 30px;
+}
+nav ul {
+    display: flex;
+    
+    list-style: none;
+    justify-content: space-around;
+    gap: 10%; /* space between buttons */
+    margin: 0;
+    padding: 0px;
+}
+a:link { text-decoration: none;}
+
+nav ul li a {
+    display: flex; 
+    margin: 10px 20px 10px 20px;
+}
+
+#emailus {
     width: 5vw;
     list-style: none;
     border: 2px solid #1cb3ff;
     border-radius: 12px;
     padding: 10px 10px 10px 10px;
     background-color: #2a2a2a;
-    
 }
-#logospace a{
-
+#emailus a{
     display:flex;
     text-decoration: none;
     color: #1cb3ff;
     justify-content: center;
     font-size: clamp(.4rem, 1.2vw, 1.1rem);
 }
-#logospace:hover{
+#emailus:hover{
     border-color: #4df77d;
 }
 
@@ -37,23 +69,14 @@ nav {
     color: #4df77d;    
 }
 #logo a:hover{ filter: hue-rotate(-90deg);}
-body {
-    margin: 0;
-    background-image: url('../images/sharkbackground.png');
-    background-attachment: fixed;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+
 #homepage{ height: 400px;
     line-height: 50px;
     
     padding-left: 50px;
     padding-top: 100px;
     font-size: 20px;
-    
-    
-    }
+}
 #sharkeat {
     display: flex;
     justify-content: center;
@@ -65,7 +88,7 @@ body {
     margin-bottom: 100px;
     
 }
-#nexttoshark{
+#nexttoshark {
     width: 80%;
     border: #1cb3ff 2px solid;
     border-radius: 12px;
@@ -73,15 +96,7 @@ body {
     margin-top: 100px;
     margin-bottom: 100px;
     padding-left: 50px;
-    padding-top: 100px;}
-nav ul {
-    display: flex;
-    
-    list-style: none;
-    justify-content: space-around;
-    gap: 10%; /* space between buttons */
-    margin: 0;
-    padding: 0px;
+    padding-top: 100px;
 }
 
 .button {
@@ -98,15 +113,10 @@ nav ul {
     display: flex;
     justify-content: center;
     font-size: clamp(.4rem, 1.2vw, 1.1rem);
-    
-
 }
 .centeredsection{
     flex: 1;
     padding: 2rem;
-    
-
-    
     border: 2px solid #1cb3ff;
     border-radius: 12px;
     margin: 25px;
@@ -122,34 +132,13 @@ nav ul {
 .button:hover {
    
     border-color: #4df77d;
-
 }
 
 #maincontainer
 { display: flex;
     align-items: stretch; /* Makes both columns equal height */
-    gap: 2rem; /*  spacing between columns */}
-
-a:link { text-decoration: none; }
-
-nav ul li a{
-    display: flex; 
-    margin: 10px 20px 10px 20px;
+    gap: 2rem; /*  spacing between columns */
 }
-img{width: 150px;}
-
-body{
-    font-family: "Special Gothic"; /* (Was Popins) Selects the font used. Be sure to add back-up font*/ 
-    margin: 0; /*Ensures browsers apply NO default margin*/
-    padding: 0; /*Gets rid of interanl spacing*/
-    line-height: 1.5em; /*Vertical line spacing (text)*/
-    background-color: #121212; /* Dark background */
-    color: #e0e0e0; /* Light text color for contrast */
-}
-
-h1{font: normal 2em "Special Gothic Expanded One";}
-h2{font: normal 1.5em "Special Gothic Expanded One";}
-h3{font: normal 1em "Special Gothic Expanded One";}
 
 /*Below code Jacob responsible for!!!*/  
 /*Do mobile optimisation*/
