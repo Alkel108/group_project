@@ -2,7 +2,7 @@
 
 body {
     
-    background-image: url('../images/sharkbackground.png');
+    background-image: url('../styles/images/sharkbackground.png');
     /* Make a background image that would be fitting this home page (screenshot of the website) */
     background-attachment: fixed;
     background-size: cover;
@@ -74,7 +74,7 @@ nav ul li a {
     border: 2px solid #1cb3ff;
     border-radius: 12px;
     background-color: #2a2a2a;
-    padding: 10px 10px -10px -10px;
+    
     width: 20vw;
 }
 
