@@ -1,5 +1,7 @@
+/* --------------------------------------------------- GLOBAL---------------------------------------------------------- */
+
 body {
-    margin: 0;
+    
     background-image: url('../images/sharkbackground.png');
     background-attachment: fixed;
     background-size: cover;
@@ -22,24 +24,36 @@ html, body {
     min-width: 768px;
 }
 
-h1 {font: normal 2em "Special Gothic Expanded One";}
-h2 {font: normal 1.5em "Special Gothic Expanded One";}
-h3 {font: normal 1em "Special Gothic Expanded One";}
+h1, h2, h3 {
+    font-family: "Special Gothic Expanded One", sans-serif;
+}
+h1 { font-size: 2em; }
+h2 { font-size: 1.5em; }
+h3 { font-size: 1em; }
 
+footer{ /*Add hover to text, color, again, is open to change as with other elements*/
+    background-color: #1f1f1f; /*Footer should be universal accross all pages?*/
+    text-align: center; 
+    padding: 10px; /*The space between an elements content and the border*/
+    clear: both; /*Ensures that floated elements sit below the footer (aside caused trouble when I floated it right, which was a requirement*/
+    color: #e0e0e0;
+    width: 100%;
+}
+footer a{ color: #1cb3ff;}
+
+/* ---------- menu ---------- */
 #nav-container{
     display: flex;
-    justify-content: space-between; /* logo on left, links on right */
+    justify-content: space-between; 
     align-items: center;
 }
 nav {
     border-bottom: 2px solid #1cb3ff;
-    
     background-color: #1a1a1a;
     padding: 10px 30px;
 }
 nav ul {
     display: flex;
-    
     list-style: none;
     justify-content: space-around;
     gap: 10%; /* space between buttons */
@@ -52,6 +66,23 @@ nav ul li a {
     display: flex; 
     margin: 10px 20px 10px 20px;
 }
+/* ---------- buttons ---------- */
+.navbutton {
+    border: 2px solid #1cb3ff;
+    border-radius: 12px;
+    background-color: #2a2a2a;
+    padding: 10px 10px -10px -10px;
+    width: 20vw;
+}
+
+.navbutton a {
+    color: #1cb3ff;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    font-size: clamp(.4rem, 1.2vw, 1.1rem);
+}
+/* ---------- email button ---------- */
 #emailus {
     width: 5vw;
     list-style: none;
@@ -68,9 +99,10 @@ nav ul li a {
     font-size: clamp(.4rem, 1.2vw, 1.1rem);
 }
 /* change border colour on hover */
-#emailus:hover, .button:hover, .centeredsection:hover, #nexttoshark:hover {
+#emailus:hover, .navbutton:hover, .mainpanel:hover, #nexttoshark:hover {
     border-color: #4df77d;
 }
+/* ---------- logo ---------- */
 #logo img {
     width: 100px;
     object-fit: cover;
@@ -80,6 +112,8 @@ nav ul li a {
 
 #sharkeat:hover{ transition: filter 1s ease;} /* ease into colour */
 
+
+/* --------------------------------------------------- index.html styling ---------------------------------------------------------- */
 #homepage{ height: 400px;
     line-height: 50px;
     flex: 1;
@@ -113,22 +147,8 @@ nav ul li a {
     
 }
 #nexttoshark li{ padding-top: 20px;}
-.button {
-    border: 2px solid #1cb3ff;
-    border-radius: 12px;
-    background-color: #2a2a2a;
-    padding: 10px 10px -10px -10px;
-    width: 20vw;
-}
 
-.button a {
-    color: #1cb3ff;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    font-size: clamp(.4rem, 1.2vw, 1.1rem);
-}
-.centeredsection{
+.mainpanel{
     flex: 1;
     padding: 2rem;
     border: 2px solid #1cb3ff;
@@ -140,16 +160,18 @@ nav ul li a {
     line-height: 2.5em;
 }
 
-.centeredsection li, #nexttoshark li{  margin-bottom: 20px}
-.centeredsection h2, p{ display: block;}
-
-
+.mainpanel li, #nexttoshark li{  margin-bottom: 20px}
+.mainpanel h2, p{ display: block;}
 
 #maincontainer
 { display: flex;
     align-items: stretch; /* Makes both columns equal height */
     gap: 2rem; /*  spacing between columns */
 }
+
+
+/* --------------------------------------------------- jobs.html styling ---------------------------------------------------------- */
+
 
 /*Below code Jacob responsible for!!!*/  
 /*Do mobile optimisation*/
@@ -170,16 +192,6 @@ nav ul li a {
     /*<h1> elements should have their font variant, size and family etc. set using the short-hand font property. Ask tutor, seems unnecessary*/
 }
 
-footer{ /*Add hover to text, color, again, is open to change as with other elements*/
-    background-color: #1f1f1f; /*Footer should be universal accross all pages?*/
-    text-align: center; 
-    padding: 10px; /*The space between an elements content and the border*/
-    clear: both; /*Ensures that floated elements sit below the footer (aside caused trouble when I floated it right, which was a requirement*/
-    color: #e0e0e0;
-    width: 100%;
-    
-    
-}
 
 
 .jobs_sections_grouped{
@@ -373,9 +385,9 @@ button:hover {
 }
 
 
+/* --------------------------------------------------- about.html styling ---------------------------------------------------------- */
 
 
-/*Below is About page code*/
 /*Once deal with htmnl find way to style the heading of the nested list "Group Information" and "Student IDs" to make Special Gothic Expanded One font*
 /*Style table/images*/
 /*FIX THIS*/
