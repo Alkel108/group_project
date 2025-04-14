@@ -266,7 +266,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     border-top-color: #4df77d;
 }
 
-.jobs_page_aside h3 {
+.jobs_page_aside h3 { /*Styles the h3 for jobs_page_aside classs*/
     margin-bottom: 10px;
     color: #1cb3ff;
 }
@@ -371,11 +371,17 @@ button:hover {
 /*Once deal with htmnl find way to style the heading of the nested list "Group Information" and "Student IDs" to make Special Gothic Expanded One font*
 /*Style table/images*/
 /*FIX THIS*/
-
-#Group_information_list,
-#Student_IDs_list {
-    font-family: "Special Gothic Expanded One";
+.jobs_page_list dt {
+    font-weight: normal;
+    transition: font-size 0.2s ease, font-weight 0.2s ease; /*Defines transition parameters when hovered over*/
 }
+
+.jobs_page_list dd:hover {
+    font-size: 16.5px; /*Think about using em instead*/
+    color: #4df77d; /*The colour the text changes to*/
+    font-weight: 500; /*The thikness of the font*/
+}
+
 
 
 

@@ -36,14 +36,14 @@
     <div class="jobs_sections_grouped">
         <section class="jobs_page_section_1">
             <ul>
-                <li id="Group_information_list">Group Information
+                <li><h3>Group Information</h3> <!--Simple way to make list heading font (defacto a heading)-->
                     <ul class="jobs_page_list">
                         <li>Ground Name: Insert name</li>
                         <li>16:30 - 18:30 Wednesday Class</li>
                         <li>Tutor: Rahul...</li>
                     </ul>
                 </li>
-                <li id="Student_IDs_list">Student IDs 
+                <li><h3>Student IDs</h3>
                     <ul class="jobs_page_list">
                         <li>105928204 - Jacob Liemareff</li>
                         <li>104177649 - Dulaj Dinujaya</li>
@@ -54,7 +54,7 @@
         </section>   
         
         <section class="jobs_page_section_2"> <!--Figure out why not styling-->
-            <dl class=".jobs_page_list">
+            <dl class="jobs_page_list">
                 <dt>Jacob Liemareff</dt>
                 <dd>Completed jobs.html page, encompassing writing HTML and CSS, Jira</dd>
         
@@ -68,32 +68,30 @@
     </div>
 
     <!--Used Gen AI to modify table to includea caption and merged cell 
-    Prompt: Change this [pre-existing table html without merged cell/caption] to align with this: HTML table (Most have cell or row merged with a caption)-->
-    <!--STYLE THIS CODE!-->
+    Prompt:Output a HTML table (Must have cell or row merged with a caption) for members's interests.
+     There are 3 members in our group. put filler text in place of names and interests. !-->
     <table border="1">
-        <caption>Group member interests</caption>
+        <caption>Group Members' Interests</caption>
         <tr>
           <th>Name</th>
-          <th>Interests</th>
+          <th colspan="2">Interests</th>
         </tr>
         <tr>
           <td>Jacob Liemareff</td>
-          <td>I am quite the 1900s history buff</td>
+          <td>Hiking and exploring the outdoors</td>
+          <td>Eastern European history</td>
         </tr>
         <tr>
-          <td rowspan="2">Bob</td>
-          <td>25</td>
-          <td>Los Angeles</td>
+          <td>Member 2</td>
+          <td>Coding</td>
+          <td>Gaming</td>
         </tr>
         <tr>
-          <td>26</td>
-          <td>San Francisco</td>
-        </tr>
-        <tr>
-          <td colspan="3">This is our team</td>
+          <td>Member 3</td>
+          <td>Reading</td>
+          <td>Cooking</td>
         </tr>
       </table>
-      
       
 </body>
 </html>
