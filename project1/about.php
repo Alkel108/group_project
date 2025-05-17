@@ -10,22 +10,9 @@
 </head>
 <body>
 
-  <nav>
-    <div id="nav-container">
-      <div id="logo">
-        <a href="index.html"><img src="images/logo.png" alt="SharkSec Logo"></a>
-      </div>
-
-      <ul >
-        <li class="navbutton"><a href="jobs.html">Job listings</a></li>
-        <li class="navbutton"><a href="apply.html">Apply for a job</a></li>
-        <li class="navbutton"><a href="about.html">About us</a></li>
-      </ul>
-
-      <div id="emailus"><a href="mailto:sharksecurity@example.com"> Email us</a></div>
-
-    </div>
-  </nav>
+  
+    <?php include 'nav.inc'; ?>
+  
 
     <header class="header_jobs_page"> 
         <h1>About Us</h1> <!--Style h1, give it its own font using shorthand font property--> 
@@ -117,10 +104,5 @@
     </div>
 
 
-    <footer>
-      <p><a href="https://alkel.atlassian.net" target="_blank">Jira Project</a></p>
-      <p><a href="https://github.com/Alkel108/group_project" target="_blank">github</a></p>
-      <p>&copy; Shark Security. All rights reserved</p>
-    </footer>
-</body>
+    <?php include 'footer.inc'; ?>
 </html>
