@@ -13,10 +13,6 @@
 </head>
 
 <body>
-
-
-   
-
     <!-- navigation menu -->
     <?php include 'nav.inc'; ?>
   <header class="header_jobs_page">
