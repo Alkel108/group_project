@@ -23,7 +23,7 @@
     <h2 id="apply-heading">Job Application Form</h2>
 
     <!-- sends data to test server -->
-    <form action="https://mercury.swin.edu.au/it000000/formtest.php" method="post">
+    <form action="process_eoi.php" method="post">
       
       <!-- job reference  -->
       <label for="jobref">Job Reference Number:</label>

@@ -16,7 +16,7 @@
   
    <?php include 'nav.inc'; ?>
     <section id="homepage"> 
-      <h1>Protecting the Deep Web</h1>
+      <h1>Protecting the Deep </h1>
       <p>SharkSec is a cutting-edge cybersecurity firm dedicated to keeping your data safe from digital predators
         <br> Dive deep with us into secure waters
       </p>
