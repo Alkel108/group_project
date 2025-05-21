@@ -6,88 +6,184 @@ Following this I gave this prompt: "How would I include your code in the existin
 (Also sidenote comment each non repeated line of php code and each repeated line of code once and what it does)"
 Then I used the prompt: "Could you add the php code that I need to the jobs.php file
  (comment the php code well and add a comment showing what you changed)"
- This was the final prompt used and that code was copied and pasted here.-->
 
-<!DOCTYPE html> <!--Tells the browser that this is HTML5, important for interpretation--> 
+ Following this prompt, I prompted ChatGPT to "Do this: Insert proper job records as rows (not columns) now as you said. 
+ Here is the info for both jobs (Extract it from the original html file (before it became .php) 
+ all info you need is there) from this make the insert into statement." This was to fix an issue.
+ Following this ChatGPT offererd to do as follows:
+"Ready for me to give you the updated jobs.php code that displays all the fields (including lists)?" which I accepted.
+This code was later manually modified in parts where needed to fix other errors or bugs as I went along
+Any smaller more specific AI written code will be directly annoatated.-->
+
+<!--PS NEED TO MAKE SURE PROPER CONNECTIONS ARE MADE TO THE DATABASE/MYPHPADMIN-->
+
+<!DOCTYPE html> 
 <html lang="en"> 
-<head> <!--Contains meta tags, links to external content and to other files-->
+<head> 
     <meta charset="UTF-8">                 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Listings</title>
-    <link rel="stylesheet" href="styles/styles.css"> <!--Links HTML to CSS file-->
-    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+
+    <!-- Link to external CSS stylesheet for custom styles -->
+    <link rel="stylesheet" href="styles/styles.css"> 
+
+    <!-- Google Fonts import -->
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
 </head>
 <body> 
-  <?php include 'nav.inc'; ?>
+
+    <!-- Include the navigation bar from a reusable file -->
+    <?php include 'nav.inc'; ?>
 
     <header class="header_jobs_page"> 
-        <h1>Job Listings</h1> <!--Style h1, give it its own font using shorthand font property--> 
+        <h1>Job Listings</h1>
     </header>
 
-    <div class="jobs_sections_grouped"> <!--Replaced hardcoded job sections with dynamic PHP output below-->
+    <div class="jobs_sections_grouped"> 
 
         <!-- START: PHP Dynamic Job Listings -->
         <?php
-        require_once "settings.php"; // Loads database connection credentials
+        // Load database credentials from settings.php (host, user, pwd, db name)
+        require_once "settings.php";
 
-        $conn = @mysqli_connect($host, $user, $pwd, $sql_db); // Connect to the MySQL database
+        // Connect to the MySQL database
+        // @ symbol suppresses errors from being displayed directly
+        $conn = @mysqli_connect($host, $user, $pwd, $sql_db); 
 
+        // Check if the connection failed
         if (!$conn) {
-            // Show error if connection fails
-            echo "<p>Database connection failed. Please try again later.</p>";
+            // Display a simple user-friendly error if DB connection fails
+            echo "<p>Database connection failed.</p>";
         } else {
-            $query = "SELECT * FROM jobs"; // SQL query to fetch all jobs
-            $result = mysqli_query($conn, $query); // Execute the SQL query
 
+            // SQL query to retrieve all rows (job postings) from the `jobs` table
+            $query = "SELECT * FROM jobs";
+
+            // Send the query to the database and store the result
+            $result = mysqli_query($conn, $query); 
+
+            // Check if query returned rows and executed without error
             if ($result && mysqli_num_rows($result) > 0) {
-                // Loop through each job row in the result
+
+                // Loop through each job in the result set
                 while ($row = mysqli_fetch_assoc($result)) {
-                    echo '<section class="jobs_page_section">'; // Begin a section for each job
+                    // Each $row is an associative array representing one job (e.g., $row['job_title'])
 
-                    // Job Title and Reference Number
+                    echo '<section class="jobs_page_section">';
+
+                    // Output job title (escaped for safety using htmlspecialchars)
                     echo "<h2>" . htmlspecialchars($row['job_title']) . "</h2>";
-                    echo "<p>Reference Number: " . htmlspecialchars($row['job_ref']) . "</p>";
 
-                    // Optional: Closing Date
-                    echo "<p>Closing Date: " . htmlspecialchars($row['closing_date']) . "</p>";
+                    // Display reference number
+                    echo "<p><strong>Reference Number:</strong> " . htmlspecialchars($row['job_ref']) . "</p>";
 
-                    // Job Description
-                    echo "<p>" . nl2br(htmlspecialchars($row['job_description'])) . "</p>";
+                    // Display salary range
+                    echo "<p><strong>Salary Range:</strong> " . htmlspecialchars($row['salary_range']) . "</p>";
 
-                    // Apply Button with job_ref as URL parameter
+                    // Display who the job reports to
+                    echo "<p><strong>Reports to:</strong> " . htmlspecialchars($row['reports_to']) . "</p>";
+
+                    // Display location of the job
+                    echo "<p><strong>Location:</strong> " . htmlspecialchars($row['location']) . "</p>";
+
+                    // Display application closing date
+                    echo "<p><strong>Closing Date:</strong> " . htmlspecialchars($row['closing_date']) . "</p>";
+
+                    echo "<hr>"; // Horizontal line for visual separation
+
+                    // Job duties section
+                    echo "<h3>What you will do</h3>";
+
+                    // nl2br() converts newlines in text into <br> tags
+                    // htmlspecialchars() prevents HTML/script injection
+                    echo "<p>" . nl2br(htmlspecialchars($row['what_you_do'])) . "</p>";
+
+                    echo "<hr>";
+
+                    // Key responsibilities section
+                    echo "<h3>Key responsibilities</h3>";
+
+                    // Check that the field is not empty
+                    if (!empty($row['key_responsibilities'])) {
+
+                        // Convert pipe-separated string into an array
+                        // e.g., "Do this|Do that" → ["Do this", "Do that"]
+                        $responsibilities = explode('|', $row['key_responsibilities']);
+
+                        echo "<ul class='jobs_page_list'>";
+
+                        // Loop through the array and print each item as a bullet point
+                        foreach ($responsibilities as $item) {
+                            echo "<li>" . htmlspecialchars(trim($item)) . "</li>"; // trim() removes extra spaces
+                        }
+
+                        echo "</ul>";
+                    }
+
+                    echo "<hr>";
+
+                    // Job requirements: Essential skills
+                    echo "<h3>Job requirements</h3>";
+                    echo "<p>Essential to have:</p>";
+
+                    if (!empty($row['essential_skills'])) {
+                        $essential = explode('|', $row['essential_skills']);
+                        echo "<ul class='jobs_page_list'>";
+                        foreach ($essential as $item) {
+                            echo "<li>" . htmlspecialchars(trim($item)) . "</li>";
+                        }
+                        echo "</ul>";
+                    }
+
+                    // Job requirements: Preferred skills
+                    echo "<p>Preferable to have:</p>";
+
+                    if (!empty($row['preferred_skills'])) {
+                        $preferred = explode('|', $row['preferred_skills']);
+                        echo "<ul class='jobs_page_list'>";
+                        foreach ($preferred as $item) {
+                            echo "<li>" . htmlspecialchars(trim($item)) . "</li>";
+                        }
+                        echo "</ul>";
+                    }
+
+                    // Link to apply form, passes job_ref via URL
                     echo '<a href="apply.php?job_ref=' . urlencode($row['job_ref']) . '">Apply Now</a>';
 
-                    echo "</section>";
+                    echo "</section>"; // End job section
                 }
             } else {
-                // If no jobs found
-                echo "<p>No job listings available at the moment.</p>";
+                // If no jobs found or query failed
+                echo "<p>No jobs available.</p>";
             }
 
-            mysqli_close($conn); // Close the database connection
+            // Close the database connection to free up resources
+            mysqli_close($conn); 
         }
         ?>
         <!-- END: PHP Dynamic Job Listings -->
-
     </div>
 
-    <div class="jobs_container"> <!--Used Gen AI to help better structure this code. PROMPT: Can I create a box and put the image in the box to position it? -->
+    <!-- Static section with extra company info -->
+    <div class="jobs_container"> 
         <div class="jobs_image-box"> 
-          <img src="images/ChatGPT_img_jobs.png" alt="Company Benefits infographic">
+            <!-- Image related to company perks/benefits -->
+            <img src="images/ChatGPT_img_jobs.png" alt="Company Benefits infographic">
         </div>
+
         <aside class="jobs_page_aside">
-          <h2>Why else should you join our company?</h2>
-          <ol id="jobs_page_list_ol">
-            <li>98% of our employees are satisfied with their positions</li>
-            <li>We provide 4 weeks of paid annual leave</li>
-            <li>We provide 3 additional weeks of unpaid annual leave</li>
-            <li>We plant 5000 trees annually as part of a carbon offset scheme</li>
-            <li>Two psychology appointments offered annually</li>
-          </ol>
+            <h2>Why else should you join our company?</h2>
+            <ol id="jobs_page_list_ol">
+                <li>98% of our employees are satisfied with their positions</li>
+                <li>We provide 4 weeks of paid annual leave</li>
+                <li>We provide 3 additional weeks of unpaid annual leave</li>
+                <li>We plant 5000 trees annually as part of a carbon offset scheme</li>
+                <li>Two psychology appointments offered annually</li>
+            </ol>
         </aside>
-      </div>
-      
-  <?php include 'footer.inc'; ?>    
+    </div>
+
+    <!-- Include the footer using reusable code -->
+    <?php include 'footer.inc'; ?>    
 </body>
 </html>
