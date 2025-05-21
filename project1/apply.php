@@ -14,7 +14,7 @@
 
 <body>
     <!-- navigation menu -->
-    <?php include 'nav.inc'; ?>
+  <?php include 'nav.inc'; ?>
   <header class="header_jobs_page">
     <h1>Job Application | SharkSec</h1>
   </header>

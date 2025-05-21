@@ -44,7 +44,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     
     $result = mysqli_query($conn, $query);
     
-    $eoi_number = $row['EOInumber'];
+
+    
+    $eoi_number = mysqli_insert_id($conn);
+
    
 
     echo htmlspecialchars($eoi_number);
