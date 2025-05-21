@@ -156,9 +156,6 @@ Any smaller more specific AI written code will be directly annoatated.-->
                         echo "</ul>";
                     }
 
-                    // Link to apply form, passes job_ref via URL
-                    echo '<a href="apply.php?job_ref=' . urlencode($row['job_ref']) . '">Apply Now</a>';
-
                     echo "</section>"; // End job section
                 }
             } else {
