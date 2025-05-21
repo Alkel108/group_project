@@ -16,7 +16,7 @@ This code was later manually modified in parts where needed to fix other errors 
 
 Any smaller more specific AI written code will be directly annoatated.-->
 
-<!--Fix CSS for aside element! MY OCD IS KILLING ME-->
+<!--Add more comments to PHP (to help my own understanding of what everything does) -->
 
 <!DOCTYPE html> 
 <html lang="en"> 
