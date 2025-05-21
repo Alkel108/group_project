@@ -30,9 +30,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $input_skills = isset($_POST['skills']) ? $_POST['skills'] : null;
     $input_otherskills = trim($_POST['otherskills']);
     $input_status = 'New';
-   
-    
-    
     
     $query = "INSERT INTO `eoi` (
     `JobReferenceNumber`, `FirstName`, `LastName`, `DateOfBirth`, `Gender`, `StreetAddress`,
@@ -43,17 +40,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     '$input_skills', '$input_otherskills', '$input_status')";
     
     $result = mysqli_query($conn, $query);
-    
-
-    
     $eoi_number = mysqli_insert_id($conn);
-
-   
-
     echo htmlspecialchars($eoi_number);
-    
-
-
 }
 ?>
 
