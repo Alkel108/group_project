@@ -5,17 +5,18 @@ it_support_technician and senior_full_stack_web_developer"
 Following this I gave this prompt: "How would I include your code in the existing jobs page:
 (Also sidenote comment each non repeated line of php code and each repeated line of code once and what it does)"
 Then I used the prompt: "Could you add the php code that I need to the jobs.php file
- (comment the php code well and add a comment showing what you changed)"
+(comment the php code well and add a comment showing what you changed)"
 
- Following this prompt, I prompted ChatGPT to "Do this: Insert proper job records as rows (not columns) now as you said. 
- Here is the info for both jobs (Extract it from the original html file (before it became .php) 
- all info you need is there) from this make the insert into statement." This was to fix an issue.
- Following this ChatGPT offererd to do as follows:
+Following this prompt, I prompted ChatGPT to "Do this: Insert proper job records as rows (not columns) now as you said. 
+Here is the info for both jobs (Extract it from the original html file (before it became .php) 
+all info you need is there) from this make the insert into statement." This was to fix an issue.
+Following this ChatGPT offererd to do as follows:
 "Ready for me to give you the updated jobs.php code that displays all the fields (including lists)?" which I accepted.
 This code was later manually modified in parts where needed to fix other errors or bugs as I went along
+
 Any smaller more specific AI written code will be directly annoatated.-->
 
-<!--PS NEED TO MAKE SURE PROPER CONNECTIONS ARE MADE TO THE DATABASE/MYPHPADMIN-->
+<!--Add more comments to PHP (to help my own understanding of what everything does) -->
 
 <!DOCTYPE html> 
 <html lang="en"> 
@@ -28,6 +29,7 @@ Any smaller more specific AI written code will be directly annoatated.-->
     <link rel="stylesheet" href="styles/styles.css"> 
 
     <!-- Google Fonts import -->
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
 </head>
 <body> 
@@ -66,10 +68,17 @@ Any smaller more specific AI written code will be directly annoatated.-->
             if ($result && mysqli_num_rows($result) > 0) {
 
                 // Loop through each job in the result set
+                // ChatGPT prompt responsible for the two line below ("$index = 1;"):"I will give you your code: (input jobs.php 
+                // Can you cross check and see why the jobs.php page is not formatting/styling correctly (IE no borders, aside colour is same everywhere.  )"
+                $index = 1;
                 while ($row = mysqli_fetch_assoc($result)) {
                     // Each $row is an associative array representing one job (e.g., $row['job_title'])
 
-                    echo '<section class="jobs_page_section">';
+                   // ChatGPT prompt responsible for the two lines below:"I will give you your code: (input jobs.php 
+                   // Can you cross check and see why the jobs.php page is not formatting/styling correctly (IE no borders, aside colour is same everywhere.  )"
+                   echo "<section class='jobs_page_section_$index'>";
+                   $index++;
+
 
                     // Output job title (escaped for safety using htmlspecialchars)
                     echo "<h2>" . htmlspecialchars($row['job_title']) . "</h2>";
@@ -146,9 +155,6 @@ Any smaller more specific AI written code will be directly annoatated.-->
                         }
                         echo "</ul>";
                     }
-
-                    // Link to apply form, passes job_ref via URL
-                    echo '<a href="apply.php?job_ref=' . urlencode($row['job_ref']) . '">Apply Now</a>';
 
                     echo "</section>"; // End job section
                 }
