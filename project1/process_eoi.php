@@ -4,8 +4,8 @@ require_once('settings.php');
 $conn = mysqli_connect($host, $user, $pwd, $sql_db);
 
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
+if($_SERVER['REQUEST_METHOD'] == 'POST')
+{
     $input_jobref = trim($_POST['jobref']);
     $input_fname = trim($_POST['fname']);
     $input_lname = trim($_POST['lname']);
