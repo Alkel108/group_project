@@ -226,8 +226,9 @@ function change_eoi_status($conn, $eoi){}
     </section>
 <div>
 </body>
-<?php include 'footer.inc'; ?>    
+
 </html>
+<?php include 'footer.inc'; ?>    
 
 
 
