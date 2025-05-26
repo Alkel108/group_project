@@ -95,12 +95,12 @@
       <!-- checkboxes technical skill -->
       <fieldset>
         <legend>Technical Skills (Select all that apply):</legend>
-        <label><input type="checkbox" name="skills" value="HTML" /> HTML</label>
-        <label><input type="checkbox" name="skills" value="CSS" /> CSS</label>
-        <label><input type="checkbox" name="skills" value="JavaScript" /> JavaScript</label>
-        <label><input type="checkbox" name="skills" value="Python" /> Python</label>
-        <label><input type="checkbox" name="skills" value="Java" /> Java</label>
-        <label><input type="checkbox" name="skills" value="SQL" /> SQL</label>
+        <label><input type="checkbox" name="skills[]" value="HTML" /> HTML</label>
+        <label><input type="checkbox" name="skills[]" value="CSS" /> CSS</label>
+        <label><input type="checkbox" name="skills[]" value="JavaScript" /> JavaScript</label>
+        <label><input type="checkbox" name="skills[]" value="Python" /> Python</label>
+        <label><input type="checkbox" name="skills[]" value="Java" /> Java</label>
+        <label><input type="checkbox" name="skills[]" value="SQL" /> SQL</label>
       </fieldset>
 
       <!-- textarea for additional skills part-->

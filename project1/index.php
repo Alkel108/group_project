@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | SharkSec</title>
-    <link href="jobs.html"  rel="webpage">
-    <link href="apply.html" rel="webpage">
-    <link href="about.html" rel="webpage">
+    <link href="jobs.php"  rel="webpage">
+    <link href="apply.php" rel="webpage">
+    <link href="about.php" rel="webpage">
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
     <link href="styles/styles.css" rel="stylesheet">
 </head>
 <body>
   
-   <?php include 'nav.inc'; ?>
+   
+  <?php include 'nav.inc'; ?>
+   <header id="site-header">
+    <div class="header_jobs_page">Shark Security</div>
+    
+  </header>
     <section id="homepage"> 
       <h1>Protecting the Deep </h1>
       <p>SharkSec is a cutting-edge cybersecurity firm dedicated to keeping your data safe from digital predators

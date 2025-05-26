@@ -1,5 +1,19 @@
 
 
+<?php
+require_once('settings.php');
+$conn = mysqli_connect($host, $user, $pwd, $sql_db);
+
+// Function to sanitize inputs
+function sanitize_input($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = htmlspecialchars($data, ENT_QUOTES);
+    return $data;
+}
+
+?>
+
 <html>
 <head> <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet">
@@ -71,17 +85,3 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?></main> </body> </html>
 
-
-<?php
-require_once('settings.php');
-$conn = mysqli_connect($host, $user, $pwd, $sql_db);
-
-// Function to sanitize inputs
-function sanitize_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data, ENT_QUOTES);
-    return $data;
-}
-
-?>
