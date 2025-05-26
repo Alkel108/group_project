@@ -55,7 +55,7 @@ footer a{
 nav {
     border-bottom: 2px solid #1cb3ff;
     background-color: #1a1a1a;
-    padding: 10px 30px;
+    padding: 2px 30px;
     flex-direction: row;
 }
 nav ul {
