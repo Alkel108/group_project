@@ -59,7 +59,7 @@ function change_eoi_status($conn, $eoi){}
 <div class="manager-container">
     <section class="form-section">
         <h1> Manager </h1>
-        <form action="manager.php" method="post">
+        <form action="manager.php" method="post" novalidate= "novalidate" >
 
             <fieldset> 
                 <label><input type="submit" name="listall" value="List all"  /> </label>
@@ -148,7 +148,14 @@ function change_eoi_status($conn, $eoi){}
                     }
                     
                 }
-                if (isset($_POST['lastname'])){displaydata($conn, 'firstname', 'FirstName', FALSE);}
+                if (!empty($_POST['firstname'])) {
+                    displaydata($conn, $_POST['firstname'], 'FirstName', FALSE);
+                }
+                if (!empty($_POST['lastname'])) {
+                    displaydata($conn, $_POST['lastname'], 'LastName', FALSE);
+                }
+
+                
 
                 if (isset($_POST['change_status'])) 
                 {
