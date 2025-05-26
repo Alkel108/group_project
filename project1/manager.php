@@ -92,6 +92,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 ?>
 
 <html>
+<head><link rel="stylesheet" href="styles/styles.css">
+ <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet"> </head>
+
+<main>
 <h1> Manager </h1>
 <p> 
 <form action="manager.php" method="post">
@@ -146,6 +151,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
 </form>
 </p>
+</main>
 </html>
 
 
