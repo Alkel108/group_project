@@ -106,6 +106,25 @@ function change_eoi_status($conn, $eoi){}
                 </label><br>
                 <input type="submit" name="change_status" value="Update Status">
             </fieldset>
+
+            <fieldset>
+            <legend>Sort EOIs</legend>
+            <label for="sortby">Sort by:</label>
+            <select name="sortby" id="sortby">
+                <option value="EOInumber">EOI Number</option>
+                <option value="JobReferenceNumber">Job Reference</option>
+                <option value="FirstName">First Name</option>
+                <option value="LastName">Last Name</option>
+                <option value="DateOfApplication">Application Date</option>
+                <option value="Status">Status</option>
+            </select>
+            <select name="order">
+                <option value="ASC">Ascending</option>
+                <option value="DESC">Descending</option>
+            </select>
+            <input type="submit" name="sort_submit" value="Sort">
+        </fieldset>
+
         </form>
     </section>
 
@@ -162,21 +181,45 @@ function change_eoi_status($conn, $eoi){}
                     $eoi_id = mysqli_real_escape_string($conn, $_POST['eoi_id']);
                     $new_status = mysqli_real_escape_string($conn, $_POST['new_status']);
 
-                    // Example: use EOI ID as the identifier
+                   
                     $query = "UPDATE `eoi` SET `Status` = '$new_status' WHERE `EOInumber` = '$eoi_id'";
 
                     $result = mysqli_query($conn, $query);
 
                     if ($result) {
                         if (mysqli_affected_rows($conn) > 0) {
-                            echo "EOI status updated successfully for EOI ID <strong>$eoi_id</strong>.<hr>";
+                            echo "EOI status updated for EOI $eoi_id <hr>";
                         } else {
                             echo "No EOI found";
                         }
                     } else {
-                        echo "Error updating status: " . mysqli_error($conn);
+                        echo "Error";
                     }
                 }
+
+                // Sort EOIs
+                if (isset($_POST['sort_submit'])) {
+                    $allowed_fields = ['EOInumber', 'JobReferenceNumber', 'FirstName', 'LastName', 'DateOfApplication', 'Status'];
+                    $allowed_order = ['ASC', 'DESC'];
+
+                    $sortby = in_array($_POST['sortby'], $allowed_fields) ? $_POST['sortby'] : 'EOInumber';
+                    $order = in_array($_POST['order'], $allowed_order) ? $_POST['order'] : 'ASC';
+
+                    $query = "SELECT * FROM eoi ORDER BY $sortby $order";
+                    $result = mysqli_query($conn, $query);
+
+                    if ($result) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            foreach ($row as $column => $value) {
+                                echo htmlspecialchars($column) . ': ' . htmlspecialchars($value) . '<br>';
+                            }
+                            echo '<hr>';
+                        }
+                    } else {
+                        echo "Error";
+                    }
+                }
+
                 
             }
         ?>
