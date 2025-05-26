@@ -110,16 +110,6 @@ nav ul li a {
     border-color: #4df77d;
 }
 
-/* ---------- apply_page_buttons ---------- */
-
-#apply_page_buttons {
-    display: flex;
-    text-decoration: none;
-    color: #1cb3ff;
-    justify-content: center;
-    font-size: clamp(.3rem, 1.2vw, 1.1rem);
-}
-
 /* ---------- logo ---------- */
 #logo img {
     width: 800px;
@@ -322,6 +312,22 @@ nav ul li a {
     font-size: 16.5px; /*Think about using em instead*/
     color: #4df77d; /*The colour the text changes to*/
     font-weight: 500; 
+}
+
+
+#jobs_page_section_buttons {
+    display: flex;
+    text-decoration: none;
+    color: #1cb3ff;
+    justify-content: center;
+    font-size: clamp(.3rem, 1.2vw, 1.1rem);
+    background-color: #001f3f;     
+    padding: 10px 20px;            
+    border-radius: 8px;            
+    border: 2px solid #1cb3ff;     
+    margin-top: 1rem;             
+    width: fit-content;           
+    align-self: center;            
 }
 
 /* --------------------------------------------------- css for apply.html page---------------------------------------------------------- */
