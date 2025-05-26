@@ -48,12 +48,21 @@
             <dl class="jobs_page_list">
                 <dt><p class="about_name">Jacob Liemareff</p></dt> <!--If can't fix revert to using h3-->
                 <dd>Completed jobs.html page, particpated in Jira management</dd>
-        
+                <dd>Part 2:</dd> <dd> jobs table </dd>
+                <dd> Fixes to make website more user friendly</dd>
+                <dd> Helped with slides</dd>
                 <dt><p class="about_name">Dulaj Dinujaya</p></dt>
                 <dd>Completed apply.html page</dd>
+                 <dd>Part 2:
+                </dd><dd> created link between pages using include</dd>
         
                 <dt><p class="about_name">Alex Kelly</p></dt>
                 <dd>Created index.html page, logo (using genAI) and navigation bar, Jira</dd>
+                <dd>Part 2:
+                </dd><dd> eoi table and submission of validated records </dd>
+                <dd> Created Manager.php , settings.php</dd>
+                <dd> Updated about page </dd>
+            </dl>
             </dl>
         </section>
     </div>
