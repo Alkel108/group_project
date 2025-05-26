@@ -71,7 +71,7 @@ a:link { text-decoration: none;}
 
 nav ul li a {
     display: flex; 
-    margin: 10px 20px 10px 20px;
+    margin: 0px 20px 0px 20px;
 }
 /* ---------- buttons ---------- */
 .navbutton {
@@ -79,7 +79,7 @@ nav ul li a {
     border-radius: 12px;
     background-color: #2a2a2a;
     
-    width: 20vw;
+    width: 10vw;
 }
 
 .navbutton a {
