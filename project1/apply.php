@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apply | SharkSec</title>
+    <title>Document</title>
     <link href="jobs.html"  rel="webpage">
     <link href="apply.html" rel="webpage">
     <link href="about.html" rel="webpage">

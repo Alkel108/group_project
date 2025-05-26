@@ -314,7 +314,7 @@ nav ul li a {
 }
 
 /* --------------------------------------------------- css for apply.html page---------------------------------------------------------- */
-main {
+main{
     max-width: 800px; 
     margin: 2em auto;   /* use auto to center the margine */
     padding: 2em;   /* */
@@ -528,6 +528,38 @@ horizontally aligned, but centered in he middle and add heading to each of the i
 .about_image-item h3 {
     margin-bottom: 10px;
 }
+
+
+
+
+
+/* Manager.php  */
+.manager-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.form-section {
+    width: 45%;
+}
+.output {
+    display: block;                    /* Use block instead of flex unless it's a container for children */
+    width: 90%;                        /* Take up 90% of the parent/container */
+    max-width: 1000px;                 /* Optional: Limit max width to keep things readable */
+    margin: 1.5em auto 0 auto;         /* Center horizontally with space on top */
+    background-color: #1e1e1e;         /* Dark background to match others */
+    color: #e0e0e0;                    /* Light text color */
+    border: 2px solid #1cb3ff;         /* Blue border like .mainpanel and forms */
+    border-radius: 12px;               /* Rounded corners */
+    padding: 1.5em 2em;                /* Comfortable internal spacing, more horizontal padding */
+    font-size: 1em;                    /* Base readable font size */
+    line-height: 1.6em;                /* Line spacing */
+    box-shadow: 0 0 20px rgba(28, 179, 255, 0.1);  /* Subtle glow effect */
+    transition: border-color 0.2s ease; /* Smooth hover transition */
+}
+
 
 
 
