@@ -40,7 +40,11 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
     color: #e0e0e0;
     width: 100%;
 }
-footer a{ text-decoration: none;}
+footer a{ 
+    text-decoration: none;
+    color: #1cb3ff;
+
+}
 
 /* ---------- menu ---------- */
 #nav-container{
