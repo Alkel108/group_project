@@ -6,6 +6,7 @@
       </div>
 
       <ul >
+        <li class="navbutton"><a href="index.php">Home</a></li>
         <li class="navbutton"><a href="jobs.php">Job listings</a></li>
         <li class="navbutton"><a href="apply.php">Apply for a job</a></li>
         <li class="navbutton"><a href="about.php">About us</a></li>
