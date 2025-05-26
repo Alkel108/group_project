@@ -23,7 +23,7 @@ function sanitize_input($data) {
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $errors = [];
 
-    // Sanitize inputs
+    // Sanitise 
     $input_jobref = sanitize_input($_POST['jobref'] ?? '');
     $input_fname = sanitize_input($_POST['fname'] ?? '');
     $input_lname = sanitize_input($_POST['lname'] ?? '');
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $input_otherskills = sanitize_input($_POST['otherskills'] ?? '');
     $input_status = 'New';
 
-    // Validate required fields
+    // Validate 
     if (empty($input_jobref)) $errors[] = "Job Reference is required.";
     if (empty($input_fname)) $errors[] = "First name is required.";
     if (empty($input_lname)) $errors[] = "Last name is required.";
@@ -52,7 +52,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (empty($input_email)) $errors[] = "Email address is required.";
     if (empty($input_phone)) $errors[] = "Phone number is required.";
 
-    // If errors exist, show them
+    // Errors
     if (!empty($errors)) {
         echo "<h3>Submission failed:</h3><ul>";
         foreach ($errors as $error) {
@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         echo "</ul>";
     } else {
-        // Proceed with database insertion
+        // Insert into database
         $query = "INSERT INTO `eoi` (
             `JobReferenceNumber`, `FirstName`, `LastName`, `DateOfBirth`, `Gender`, `StreetAddress`,
             `SuburbTown`, `State`, `Postcode`, `EmailAddress`, `PhoneNumber`, `Required TechnicalSkillList`,
