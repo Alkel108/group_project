@@ -23,7 +23,7 @@ Any smaller more specific AI written code will be directly annoatated.-->
 <head> 
     <meta charset="UTF-8">                 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jobs | SharkSec</title>
+    <title>Jobs | SharkSec</title> 
 
     <!-- Link to external CSS stylesheet for custom styles -->
     <link rel="stylesheet" href="styles/styles.css"> 
