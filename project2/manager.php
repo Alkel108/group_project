@@ -1,7 +1,7 @@
 <?php
 require_once('settings.php');
 $conn = mysqli_connect($host, $user, $pwd, $sql_db);
-
+php include 'nav.inc'; 
 function displaydata($conn, $filter_value, $column, $delete) {
     // Escape the input
     $escaped_filter_value = mysqli_real_escape_string($conn, $filter_value);
@@ -226,6 +226,7 @@ function change_eoi_status($conn, $eoi){}
     </section>
 <div>
 </body>
+<?php include 'footer.inc'; ?>    
 </html>
 
 
