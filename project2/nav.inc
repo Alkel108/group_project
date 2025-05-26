@@ -10,6 +10,7 @@
         <li class="navbutton"><a href="jobs.php">Job listings</a></li>
         <li class="navbutton"><a href="apply.php">Apply for a job</a></li>
         <li class="navbutton"><a href="about.php">About us</a></li>
+        <li class="navbutton"><a href="manager.php">Manager</a></li>
       </ul>
 
       <div id="emailus"><a href="mailto:sharksecurity@example.com"> Email us</a></div>
