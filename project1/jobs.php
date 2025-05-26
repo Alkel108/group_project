@@ -156,6 +156,8 @@ Any smaller more specific AI written code will be directly annoatated.-->
                         echo "</ul>";
                     }
 
+                    echo "<a href='apply.php' id='apply_page_buttons'>Apply Now</a>";
+
                     echo "</section>"; // End job section
                 }
             } else {

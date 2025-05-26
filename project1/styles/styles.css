@@ -43,7 +43,7 @@ footer{ /*Add hover to text, color, again, is open to change as with other eleme
 
 footer a{ 
     text-decoration: none;
-    color: #1cb3ff; /*Has little effect for some unknown reason*/
+    color: #1cb3ff; /*Has little effect for some unknown reason*/ 
 }
 
 /* ---------- menu ---------- */
@@ -109,6 +109,17 @@ nav ul li a {
 #emailus:hover, .navbutton:hover, .mainpanel:hover, #nexttoshark:hover {
     border-color: #4df77d;
 }
+
+/* ---------- apply_page_buttons ---------- */
+
+#apply_page_buttons {
+    display: flex;
+    text-decoration: none;
+    color: #1cb3ff;
+    justify-content: center;
+    font-size: clamp(.3rem, 1.2vw, 1.1rem);
+}
+
 /* ---------- logo ---------- */
 #logo img {
     width: 800px;
