@@ -1,6 +1,19 @@
+
 <html>
+    
+    <head>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Special+Gothic&display=swap" rel="stylesheet"> 
+</head>
+
+
+
 <body>
+    <?php include 'nav.inc'; ?>
+    <div  class="jobs_container">
     <h2>Login</h2>
+
     <form action="login.php" method="post">
         <label>Username:</label><br>
         <input type="text" name="username" required><br><br>
@@ -10,8 +23,14 @@
 
         <input type="submit" value="Login">
     </form>
+</div>
 </body>
+
 </html>
+
+
+
+
 <?php 
 require_once('settings.php');
 session_start();
@@ -26,7 +45,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $input_username = trim($_POST['username']);
     $input_password = trim($_POST['password']);
-    $query = "SELECT * FROM user WHERE username = '$input_username' AND password = '$input_password'";
+    $query = "SELECT * FROM users WHERE username = '$input_username' AND password = '$input_password'";
     $result = mysqli_query($conn, $query);
 
 
@@ -34,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $_SESSION['username'] = $user['username'];
         $_SESSION['email'] = $user['email'];
         
-        header("Location: profile.php");
+        header("Location: manager.php");
         exit;
     }
     else
