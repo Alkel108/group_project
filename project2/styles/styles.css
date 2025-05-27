@@ -379,10 +379,21 @@ input[type="password"],
 input[type="email"],    
 input[type="tel"],  
 input[type="date"], 
+ 
 select,     /* by selecting above input types called text, email, tel, and date it will use below stlying for all places that these inputs are use in apply.html   */
 textarea {
     padding: 0.8em;
     background-color: #2a2a2a;  
+    border: 1px solid #555;     /* add a lightly dark gray outline around the fields */
+    border-radius: 8px;     /* rounding the cornes in the fields */
+    color: #e0e0e0;     /* putting the text to a light color  */
+    font-size: 1em;    
+}   
+
+input[type="submit"]
+{
+    padding: 0.8em;
+    background-color: #1075a700;  
     border: 1px solid #555;     /* add a lightly dark gray outline around the fields */
     border-radius: 8px;     /* rounding the cornes in the fields */
     color: #e0e0e0;     /* putting the text to a light color  */
@@ -597,5 +608,16 @@ horizontally aligned, but centered in he middle and add heading to each of the i
 
 
 
-
+#login{
+    min-width: 500px;
+    max-width: 800px; 
+    margin: 2em auto;   /* use auto to center the margine */
+    padding: 2em;   /* */
+    background-color: #1e1e1e;  /* put backgroung to dark color */
+    border-radius: 12px;    /* making corners rounded and with 12 px radius */
+    border: 2px solid #1cb3ff;  /* making border solid and put color to light blue  */
+    color: #e0e0e0;     /* changing the text color */
+    box-shadow: 0 0 30px rgba(28, 179, 255, 0.2);   /* gives a little glowing shadow effect in the border */
+    flex: 1; /* take up space vertically */
+}
 

@@ -11,7 +11,7 @@
 
 <body>
     <?php include 'nav.inc'; ?>
-    <div  class="jobs_container">
+    <div  id="login">
     <h2>Login</h2>
 
     <form action="login.php" method="post">
@@ -23,14 +23,9 @@
 
         <input type="submit" value="Login">
     </form>
-</div>
-</body>
-
-</html>
 
 
-
-
+    
 <?php 
 require_once('settings.php');
 session_start();
@@ -65,3 +60,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 }
 
 ?>
+
+
+</div>
+</body>
+
+</html>
+
+
+
