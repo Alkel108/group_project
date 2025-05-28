@@ -11,10 +11,12 @@
         <li class="navbutton"><a href="apply.php">Apply for a job</a></li>
         <li class="navbutton"><a href="about.php">About us</a></li>
         <li class="navbutton"><a href="login.php">Manager log in</a></li>
-        <li class="navbutton"><a href="enhancements.php">Enhancements</a></li>
+        
       </ul>
 
       <div id="emailus"><a href="mailto:sharksecurity@example.com"> Email us</a></div>
 
     </div>
   </nav>
+
+<!--  <li class="navbutton"><a href="enhancements.php">Enhancements</a></li>  --!>
