@@ -18,3 +18,5 @@
 
     </div>
   </nav>
+
+<!--  <li class="navbutton"><a href="enhancements.php">Enhancements</a></li>  --!>
