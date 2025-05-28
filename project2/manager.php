@@ -66,7 +66,7 @@ function change_eoi_status($conn, $eoi){}
             </fieldset>
 
             <fieldset>
-                List from: 
+                <legend>List from:</legend> 
                 <label> <input type="checkbox" name="G01"> GO1</label>
                 <label> <input type="checkbox" name="G02"> GO2</label>
                 <label> <input type="checkbox" name="G03"> GO3</label>
@@ -77,14 +77,14 @@ function change_eoi_status($conn, $eoi){}
                 <label> <input type="submit" name="submitt" value="Submit"  /> </label>
             </fieldset>
             <fieldset>
-                List from: 
+                <legend>List from: </legend>
                 <label> First name: <input type="textbox" name="firstname"> </label>
                 <label> Last name: <input type="textbox" name="lastname"> </label> 
                 <label> <input type="submit" name="submitt" value="Submit"  /> </label>
             </fieldset>
 
             <fieldset>
-                Delete from: 
+                <legend>Delete from: </legend> 
                 <label> <input type="checkbox" name="G01d"> GO1</label>
                 <label> <input type="checkbox" name="G02d"> GO2</label>
                 <label> <input type="checkbox" name="G03d"> GO3</label>
