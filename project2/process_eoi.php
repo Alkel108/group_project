@@ -3,7 +3,7 @@
 <?php
 require_once('settings.php');
 $conn = mysqli_connect($host, $user, $pwd, $sql_db);
-
+include 'nav.inc'; 
 // Function to sanitize inputs
 function sanitize_input($data) {
     $data = trim($data);
@@ -57,8 +57,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo "<h3>Submission failed:</h3><ul>";
         foreach ($errors as $error) {
             echo "<li>" . htmlspecialchars($error) . "</li>";
+          
+
         }
         echo "</ul>";
+        echo '<a href="manage.php"><button type="button">Back</button></a>';
     } else {
         // Insert into database
         $query = "INSERT INTO `eoi` (

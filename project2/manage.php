@@ -59,7 +59,7 @@ function change_eoi_status($conn, $eoi){}
 <div class="manager-container">
     <section class="form-section">
         <h1> Manager </h1>
-        <form action="manager.php" method="post" novalidate= "novalidate" >
+        <form action="manage.php" method="post" novalidate= "novalidate" >
 
             <fieldset> 
                 <label><input type="submit" name="listall" value="List all"  /> </label>
